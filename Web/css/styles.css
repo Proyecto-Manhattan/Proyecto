@@ -1,3 +1,6 @@
+body{
+	background:#002820;
+}
 .img-responsive{
 	width:600px;
 	color:white;
@@ -11,4 +14,7 @@ header{
 }
 .login{
 	margin:0 20%;
+}
+.jumbotron{
+	background:white url(../img/fondo.jpg) center no-repeat;
 }
