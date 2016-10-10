@@ -5,3 +5,10 @@
 header{
 	background:#006853;
 }
+
+.jumbotron h1 img{
+	margin:auto;
+}
+.login{
+	margin:0 20%;
+}
