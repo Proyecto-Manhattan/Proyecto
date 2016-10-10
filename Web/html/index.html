@@ -6,6 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../Web/css/bootstrap-theme.min.css">
+	<!--Github bootstrap more Glyphicons-->
+	<link href="css/bootstrap.icon-large.min.css" rel="stylesheet">
 	<!--Fonts-->
 	<link rel="fonts" type="text/font" href="../fonts/glyphicons-halflings-regular">
 	<link rel="fonts" type="text/font" href="../fonts/glyphicons-halflings-regular.svg">
@@ -25,13 +27,21 @@
 		<h1><img src="../img/bienvenido.png" class="img-responsive" alt="Imagen rota"></h1>		
 		<form>
 			<div class="input-group input-group-lg">
-				<span class="glyphicon glyphicon-user" id="sizing-addon1"></span>
+				<span class="input-group-addon" id="sizing-addon1">
+					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+				</span>				
 				<input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
-			</div>	
-			<div class="form-group">
-				<label for="pwd">Password:</label>
-				<input type="password" class="form-control" id="pwd">
 			</div>
+
+			<div class="input-group input-group-lg">
+				<span class="input-group-addon" id="sizing-addon1">
+					<span class="glyphicon icon-keys" aria-hidden="true"></span>
+				</span>				
+				<input type="password" placeholder="Password" class="form-control" id="pwd">
+			</div>
+
+			
+
 			<div class="checkbox">
 				<label><input type="checkbox"> Remember me</label>
 			</div>
