@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+
 <html>
 <head>
 	<meta charset="utf-8">
@@ -8,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 	<!--Github bootstrap more Glyphicons-->
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.icon-large.min.css">
-		<!--Fonts-->
+	<!--Fonts-->
 	<link rel="fonts" type="text/font" href="../fonts/glyphicons-halflings-regular">
 	<link rel="fonts" type="text/font" href="../fonts/glyphicons-halflings-regular.svg">
 	<link rel="fonts" type="text/font" href="../fonts/glyphicons-halflings-regular.ttf">
@@ -17,30 +19,54 @@
 	
 </head>
 <body>
+<!--<script type="text/javascript">
+		var resp;
 
-<header>
-<div class="media">
-  <div class="media-left">
-    <img src="../img/logos/itam.png" class="img-responsive">
-  </div>
-	</div>
-</header>
+		function getRes(res)
+		{
+
+			if( res == null)
+			{
+				resp = "ya pifo";
+			}
+			else
+			{
+				resp = "Usuario o Contraseña incorrectos";
+			}
+			return resp;
+		}
+		
+
+
+		Document.getElementById("resp").innerHTML = getRes('res');
+	</script>-->
+
+
+
+	<header>
+		<div class="media">
+			<div class="media-left">
+				<img src="../img/logos/itam.png" class="img-responsive">
+			</div>
+		</div>
+	</header>
 	<div class="jumbotron">
 		<h1><img src="../img/bienvenido.png" class="img-responsive" alt="Imagen rota"></h1>		
-		<form class="login">
+		<form class="login" action="Default.aspx" method="Post">
+			<p id="resp"></p>
 			<!--Username-->
 			<div class="input-group input-group-lg">
 				<span class="input-group-addon" id="sizing-addon1">
 					<i class="icon-user icon-large icon-white"></i>
 				</span>				
-				<input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+				<input type="text" name="username" class="form-control" placeholder="Username" aria-describedby="sizing-addon1" required>
 			</div>
 			<!--Password-->
 			<div class="input-group input-group-lg">
 				<span class="input-group-addon" id="sizing-addon1">
 					<i class="icon-keys icon-large icon-white"></i>
 				</span>				
-				<input type="password" placeholder="Password" class="form-control" id="pwd">
+				<input type="password"  name="password" placeholder="Password" class="form-control" id="pwd" required>
 			</div>	
 
 			<div class="checkbox">
@@ -48,11 +74,14 @@
 			</div>
 			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
-</div>
+	</div>
 
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
 	<script type="text/javascript" src="../js/scripts.js"></script>
+
+
+
 </body>
 </html>
