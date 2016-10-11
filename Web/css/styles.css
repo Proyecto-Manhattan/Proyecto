@@ -26,3 +26,14 @@ header{
 .list-group-item-danger {
     list-style:none;
 }
+@media screen and (max-width: 380px) {
+   .login{
+	margin:0;
+}
+    .input-logo {
+        display:none;
+    }
+    .input-type {
+    width:100%;
+    }
+}
