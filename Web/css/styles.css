@@ -18,3 +18,11 @@ header{
 .jumbotron{
 	background:white url(../img/fondo.jpg) center no-repeat;
 }
+.lol {
+    list-style:none;
+    background:none;
+}
+
+.list-group-item-danger {
+    list-style:none;
+}

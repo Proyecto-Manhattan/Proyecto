@@ -17,9 +17,14 @@ public partial class Web_html_Default : System.Web.UI.Page
         Response.Write("<p>" + user + "</p>");
         Response.Write("<p>" + pswd + "</p>");
 
-
-
-
-        Response.Redirect("index.html?res=none");
+        if (true)//usuario no encontrado
+        {
+            Response.Redirect("index.html?res=User o Password no Validos");
+        }
+        else 
+        {
+            //MANDA A LA PAGINA DE INICIO
+        }
+        
     }
 }

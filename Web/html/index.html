@@ -16,9 +16,45 @@
 	<link rel="fonts" type="text/font" href="../fonts/glyphicons-halflings-regular.ttf">
 	<link rel="fonts" type="text/font" href="../fonts/glyphicons-halflings-regular.woff">
 	<link rel="fonts" type="text/font" href="../fonts/glyphicons-halflings-regular.woff2">
-	
+	<script type="text/javascript" src="../js/scripts.js"></script>
+
+
+     <script type="text/javascript">
+
+         function GetParam(name) {
+
+             var start = location.search.indexOf("?" + name + "=");
+             if (start < 0) start = location.search.indexOf("&" + name + "=");
+             if (start < 0) return '';
+             start += name.length + 2;
+             var end = location.search.indexOf("&", start) - 1;
+             if (end < 0) end = location.search.length;
+             var result = '';
+             for (var i = start; i <= end; i++) {
+                 var c = location.search.charAt(i);
+                 result = result + (c == '+' ? ' ' : c);
+             }
+             return unescape(result);
+         }
+
+         function f1() {
+           
+             document.getElementById("resp").innerHTML = GetParam('res');
+             
+             var res = document.getElementById("resp");
+             var htm = res.innerHTML;
+
+             if (htm != "") {
+                 res.className += "list-group-item list-group-item-danger";
+             }
+             else {
+                 res.className = "lol";
+             }
+            
+         }
+</script> 
 </head>
-<body>
+<body onload ="f1()">
 <!--<script type="text/javascript">
 		var resp;
 
@@ -40,7 +76,7 @@
 
 		Document.getElementById("resp").innerHTML = getRes('res');
 	</script>-->
-
+   
 
 
 	<header>
@@ -53,7 +89,9 @@
 	<div class="jumbotron">
 		<h1><img src="../img/bienvenido.png" class="img-responsive" alt="Imagen rota"></h1>		
 		<form class="login" action="Default.aspx" method="Post">
-			<p id="resp"></p>
+			<ul class="list-group">
+  <li class="lol" id="resp"></li>
+</ul>
 			<!--Username-->
 			<div class="input-group input-group-lg">
 				<span class="input-group-addon" id="sizing-addon1">
@@ -79,7 +117,7 @@
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
-	<script type="text/javascript" src="../js/scripts.js"></script>
+	
 
 
 
