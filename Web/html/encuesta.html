@@ -28,10 +28,112 @@
 	</header>
 
 	<form class="forma">
+		<!--Subir Foto-->
 		<div class="form-group">
-			<label for="exampleInputEmail1">Email address</label>
-			<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-			<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+			<div class="media">
+				<div class="media-left media-middle">
+					<a href="#">
+						<img class="media-object" class="img-responsive" src="../img/no-user.png" alt="no-user">
+					</a>
+				</div>
+				<div class="media-body">					
+					<label for="exampleInputFile">Imagen</label>
+					<input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+					<small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+				</div>
+			</div>
+		</div>
+		<!--Clave Unica-->
+		<div class="form-group row">
+			<label for="example-number-input" class="col-xs-2 col-form-label">Clave Unica:</label>
+			<div class="col-xs-10">
+				<input class="form-control" type="number" id="example-number-input" placeholder="000000">
+			</div>
+		</div>
+		<!--Nombre-->
+		<div class="form-group row">
+			<label for="example-text-input" class="col-xs-2 col-form-label">Nombre:</label>
+			<div class="col-xs-10">
+				<input class="form-control" type="text" id="example-text-input" placeholder="Nombre">
+			</div>
+		</div>
+		<!--Email-->
+		<div class="form-group row">
+			<label for="example-email-input" class="col-xs-2 col-form-label">Email: </label>
+			<div class="col-xs-10">
+				<input class="form-control" type="email" id="example-email-input" placeholder="tuEmail@example.com">
+				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+			</div>
+		</div>
+			<!--Edad-->
+			<div class="form-group row">
+				<label for="example-number-input" class="col-xs-2 col-form-label">Edad:</label>
+				<div class="col-xs-10">
+					<input class="form-control" type="number" id="example-number-input" placeholder="00">
+				</div>
+			</div>
+		<!--Preparatoria-->
+		<div class="form-group row">
+			<label for="example-text-input" class="col-xs-2 col-form-label">Preparatoria:</label>
+			<div class="col-xs-10">
+				<input class="form-control" type="text" id="example-text-input" placeholder="Preparatoria">
+			</div>
+		</div>	
+		<!--Delegacion donde vive actualmente-->
+		<div class="form-group row">
+			<label for="example-text-input" class="col-xs-2 col-form-label">Delegacion donde vive actualmente:</label>
+			<div class="col-xs-10">
+				<input class="form-control" type="text" id="example-text-input" placeholder="Delegacion">
+			</div>
+		</div>	
+		<!--Estudia en otra escuela-->
+		<legend>Estudia en otra escuela</legend>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>Si
+				</label>
+				<div class="form-group row">
+			<label for="example-text-input" class="col-xs-2 col-form-label">¿Qué estudia?</label>
+			<div class="col-xs-10">
+				<input class="form-control" type="text" id="example-text-input" placeholder="Estudio">
+			</div>
+			<label for="example-text-input" class="col-xs-2 col-form-label">¿En dónde?</label>
+			<div class="col-xs-10">
+				<input class="form-control" type="text" id="example-text-input" placeholder="Lugar">
+			</div>
+		</div>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">No
+				</label>
+			</div>
+		<!--Trabaja-->
+		<legend>Trabaja</legend>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>Si
+				</label>
+				<div class="form-group row">
+			<label for="example-text-input" class="col-xs-2 col-form-label">¿En dónde?</label>
+			<div class="col-xs-10">
+				<input class="form-control" type="text" id="example-text-input" placeholder="Lugar">
+			</div>
+			<label for="example-text-input" class="col-xs-2 col-form-label">Puesto</label>
+			<div class="col-xs-10">
+				<input class="form-control" type="text" id="example-text-input" placeholder="Puesto">
+			</div>
+		</div>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">No
+				</label>
+			</div>
+
+<!--Hasta aqui todo bien-->
+
+
 		</div>
 		<div class="form-group">
 			<label for="exampleInputPassword1">Password</label>
@@ -61,11 +163,7 @@
 			<label for="exampleTextarea">Example textarea</label>
 			<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
 		</div>
-		<div class="form-group">
-			<label for="exampleInputFile">File input</label>
-			<input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-			<small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-		</div>
+
 		<fieldset class="form-group">
 			<legend>Radio buttons</legend>
 			<div class="form-check">
