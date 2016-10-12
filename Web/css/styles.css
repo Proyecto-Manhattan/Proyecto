@@ -21,7 +21,8 @@ header{
 .jumbotron{
 	background:white url(../img/fondo.jpg) center no-repeat;
     min-height: 460px;
-    max-height: 650px;
+    max-height: 800px;
+    height: 650px;
     padding-top: 100px;
 }
 .lol {
@@ -55,7 +56,9 @@ header{
       margin: 0px auto;
   }
 /*------------------------------------------------
+===================================================
                      MEDIAS
+===================================================
 -------------------------------------------------*/
 @media screen and (max-width: 380px) {
  .login{
@@ -66,14 +69,11 @@ header{
 }
 .input-type {
     width:100%;
-<<<<<<< HEAD
     }
     .input-search{
         width: 80%;
     }
-      .jumbotron{
-=======
-}
+
 .jumbotron{
     min-height: 430px;
     max-height: 520px;
