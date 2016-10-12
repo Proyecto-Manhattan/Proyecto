@@ -2,6 +2,7 @@
 body{
 	background:#002820;
     min-width: 285px;
+    overflow: hidden;
 }
 .img-responsive{
 	width:600px;
