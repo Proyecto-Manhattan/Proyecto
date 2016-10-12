@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Inicio</title>
+	<title>Encuesta</title>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
@@ -65,13 +65,13 @@
 				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 			</div>
 		</div>
-			<!--Edad-->
-			<div class="form-group row">
-				<label for="example-number-input" class="col-xs-2 col-form-label">Edad:</label>
-				<div class="col-xs-10">
-					<input class="form-control" type="number" id="example-number-input" placeholder="00">
-				</div>
+		<!--Edad-->
+		<div class="form-group row">
+			<label for="example-number-input" class="col-xs-2 col-form-label">Edad:</label>
+			<div class="col-xs-10">
+				<input class="form-control" type="number" id="example-number-input" placeholder="00">
 			</div>
+		</div>
 		<!--Preparatoria-->
 		<div class="form-group row">
 			<label for="example-text-input" class="col-xs-2 col-form-label">Preparatoria:</label>
@@ -87,109 +87,134 @@
 			</div>
 		</div>	
 		<!--Estudia en otra escuela-->
-		<legend>Estudia en otra escuela</legend>
+		<fieldset class="form-group">
+			<legend>Estudia en otra escuela</legend>
 			<div class="form-check">
 				<label class="form-check-label">
 					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>Si
 				</label>
 				<div class="form-group row">
-			<label for="example-text-input" class="col-xs-2 col-form-label">¿Qué estudia?</label>
-			<div class="col-xs-10">
-				<input class="form-control" type="text" id="example-text-input" placeholder="Estudio">
-			</div>
-			<label for="example-text-input" class="col-xs-2 col-form-label">¿En dónde?</label>
-			<div class="col-xs-10">
-				<input class="form-control" type="text" id="example-text-input" placeholder="Lugar">
-			</div>
-		</div>
+					<label for="example-text-input" class="col-xs-2 col-form-label">¿Qué estudia?</label>
+					<div class="col-xs-10">
+						<input class="form-control" type="text" id="example-text-input" placeholder="Estudio">
+					</div>
+					<label for="example-text-input" class="col-xs-2 col-form-label">¿En dónde?</label>
+					<div class="col-xs-10">
+						<input class="form-control" type="text" id="example-text-input" placeholder="Lugar">
+					</div>
+				</div>
 			</div>
 			<div class="form-check">
 				<label class="form-check-label">
 					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">No
 				</label>
-			</div>
+			</div>			
+		</fieldset>
 		<!--Trabaja-->
-		<legend>Trabaja</legend>
+		<fieldset class="form-group">
+			<legend>Trabaja</legend>
 			<div class="form-check">
 				<label class="form-check-label">
 					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>Si
 				</label>
 				<div class="form-group row">
-			<label for="example-text-input" class="col-xs-2 col-form-label">¿En dónde?</label>
-			<div class="col-xs-10">
-				<input class="form-control" type="text" id="example-text-input" placeholder="Lugar">
-			</div>
-			<label for="example-text-input" class="col-xs-2 col-form-label">Puesto</label>
-			<div class="col-xs-10">
-				<input class="form-control" type="text" id="example-text-input" placeholder="Puesto">
-			</div>
-		</div>
+					<label for="example-text-input" class="col-xs-2 col-form-label">¿En dónde?</label>
+					<div class="col-xs-10">
+						<input class="form-control" type="text" id="example-text-input" placeholder="Lugar">
+					</div>
+					<label for="example-text-input" class="col-xs-2 col-form-label">Puesto</label>
+					<div class="col-xs-10">
+						<input class="form-control" type="text" id="example-text-input" placeholder="Puesto">
+					</div>
+				</div>
 			</div>
 			<div class="form-check">
 				<label class="form-check-label">
 					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">No
 				</label>
+			</div>			
+		</fieldset>
+		<!--Financiamiento-->
+		<fieldset class="form-group">
+			<legend>Ayuda financiera</legend>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>Beca
+				</label>
+				<div class="form-group row">
+					<label for="example-number-input" class="col-xs-2 col-form-label">Porcentaje:</label>
+					<div class="col-xs-10">
+						<input class="form-control" type="number" id="example-number-input" placeholder="00%">
+					</div>
+				</div>
 			</div>
-
-<!--Hasta aqui todo bien-->
-
-
-		</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>Prestamo
+				</label>
+				<div class="form-group row">
+					<label for="example-number-input" class="col-xs-2 col-form-label">Porcentaje:</label>
+					<div class="col-xs-10">
+						<input class="form-control" type="number" id="example-number-input" placeholder="00%">
+					</div>
+				</div>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>Niniguno
+				</label>				
+			</div>			
+		</fieldset>
+		<!--Procendencia-->
+		<fieldset class="form-group">
+			<legend>Procedencia</legend>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>¿Foráneo?
+				</label>
+				<div class="form-group row">
+					<label for="example-text-input" class="col-xs-2 col-form-label">¿De dónde?</label>
+					<div class="col-xs-10">
+						<input class="form-control" type="text" id="example-text-input" placeholder="Estado">
+					</div>
+				</div>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>¿Extranjero?
+				</label>
+				<div class="form-group row">
+					<label for="example-text-input" class="col-xs-2 col-form-label">¿De dónde?</label>
+					<div class="col-xs-10">
+						<input class="form-control" type="text" id="example-text-input" placeholder="País">
+					</div>
+				</div>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>Niniguno
+				</label>				
+			</div>			
+		</fieldset>
+		<!--Actividades-->
 		<div class="form-group">
-			<label for="exampleInputPassword1">Password</label>
-			<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-		</div>
-		<div class="form-group">
-			<label for="exampleSelect1">Example select</label>
-			<select class="form-control" id="exampleSelect1">
-				<option>1</option>
-				<option>2</option>
-				<option>3</option>
-				<option>4</option>
-				<option>5</option>
-			</select>
-		</div>
-		<div class="form-group">
-			<label for="exampleSelect2">Example multiple select</label>
-			<select multiple class="form-control" id="exampleSelect2">
-				<option>1</option>
-				<option>2</option>
-				<option>3</option>
-				<option>4</option>
-				<option>5</option>
-			</select>
-		</div>
-		<div class="form-group">
-			<label for="exampleTextarea">Example textarea</label>
+			<label for="exampleTextarea">¿En qué tipo de actividad deportiva, cultural, académica te gustaría participar?</label>
 			<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
 		</div>
-
-		<fieldset class="form-group">
-			<legend>Radio buttons</legend>
-			<div class="form-check">
-				<label class="form-check-label">
-					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-					Option one is this and that&mdash;be sure to include why it's great
-				</label>
-			</div>
-			<div class="form-check">
-				<label class="form-check-label">
-					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-					Option two can be something else and selecting it will deselect option one
-				</label>
-			</div>
-			<div class="form-check disabled">
-				<label class="form-check-label">
-					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-					Option three is disabled
-				</label>
-			</div>
-		</fieldset>
-		<div class="form-check">
-			<label class="form-check-label">
-				<input type="checkbox" class="form-check-input">
-				Check me out
-			</label>
+		<!--Pasatiempos-->
+		<div class="form-group">
+			<label for="exampleTextarea">¿tienes algún hobby, pasatiempo o realizas alguna actividad extracurriculaeres?</label>
+			<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+		</div>
+		<!--Felicidad-->
+		<div class="form-group">
+			<label for="exampleTextarea">Serías más feliz en el ITAM si:</label>
+			<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+		</div>
+		<!--Comentarios-->
+		<div class="form-group">
+			<label for="exampleTextarea">Recomendaciones o comentarios en general que quisiera hacernos</label>
+			<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
 		</div>
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
