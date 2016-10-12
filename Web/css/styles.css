@@ -1,3 +1,4 @@
+
 body{
 	background:#002820;
     min-width: 285px;
@@ -49,23 +50,31 @@ header{
     float: right;
     width:15%;
 }
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      margin: 0px auto;
+  }
 /*------------------------------------------------
                      MEDIAS
 -------------------------------------------------*/
 @media screen and (max-width: 380px) {
-   .login{
+ .login{
     margin:0;
 }
-    .input-logo {
-        display:none;
-    }
-    .input-type {
+.input-logo {
+    display:none;
+}
+.input-type {
     width:100%;
+<<<<<<< HEAD
     }
     .input-search{
         width: 80%;
     }
       .jumbotron{
+=======
+}
+.jumbotron{
     min-height: 430px;
     max-height: 520px;
     padding-top: 50px;
@@ -87,5 +96,6 @@ header{
         overflow: hidden;
     }
 }
-  
+
 }
+
