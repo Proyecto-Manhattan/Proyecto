@@ -1,4 +1,5 @@
-# Manhattan D´Veritas **A.K.A** *(Consulta ITAM)
+# Manhattan D´Veritas
+    **A.K.A** *(Consulta ITAM)
 
 Proyecto que busca crear una manera mas eficiente de mantener en contacto a losprofesores con sus alumnos.
 
