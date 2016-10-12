@@ -36,6 +36,22 @@ header{
     background: #A3F7B5;
 }
 
+.btn-img{
+    min-width: 50px;
+}
+.btn-a{
+    max-height: 70px;
+}
+.btn-a img{
+    max-height: 50px;
+}
+.btn-toogle{
+    float: right;
+    width:15%;
+}
+/*------------------------------------------------
+                     MEDIAS
+-------------------------------------------------*/
 @media screen and (max-width: 380px) {
    .login{
     margin:0;
@@ -46,10 +62,30 @@ header{
     .input-type {
     width:100%;
     }
+    .input-search{
+        width: 80%;
+    }
       .jumbotron{
     min-height: 430px;
     max-height: 520px;
     padding-top: 50px;
+    }
+    
+}
+
+@media screen and (max-width: 770px) {
+
+    .input-search{
+        width: 80%;
+        float: left;
+    }
+    .btn-search{
+        width:18%;
+        float:right;
+    }
+    .search{
+        overflow: hidden;
+    }
 }
   
 }
