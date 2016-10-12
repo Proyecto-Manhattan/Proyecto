@@ -2,7 +2,7 @@
 body{
 	background:#002820;
     min-width: 285px;
-    overflow: hidden;
+    overflow: scroll;
 }
 .img-responsive{
 	width:600px;
@@ -55,11 +55,17 @@ header{
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       margin: 0px auto;
-  }
+}
 
-   .btn-search{
-        height: 34px;
-    }
+.btn-search{
+    height: 34px;
+}
+
+.carousel-caption {
+    top: 100px;
+    bottom: auto;
+}
+
 /*------------------------------------------------
 ===================================================
                      MEDIAS
