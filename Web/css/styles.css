@@ -55,6 +55,10 @@ header{
   .carousel-inner > .item > a > img {
       margin: 0px auto;
   }
+
+   .btn-search{
+        height: 34px;
+    }
 /*------------------------------------------------
 ===================================================
                      MEDIAS

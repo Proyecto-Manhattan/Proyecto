@@ -11,3 +11,8 @@ function revisa() {
         alert("no entre");
     }
 }
+
+function toogle(nombre){
+    var name = nombre;
+    $("#"+name).toggle();
+}
