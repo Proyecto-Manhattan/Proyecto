@@ -92,13 +92,22 @@ header{
     .input-search{
         width: 80%;
     }
-
+/*
 .jumbotron{
     min-height: 430px;
     max-height: 520px;
     padding-top: 50px;
     }
-
+    */
+.jumbotron {
+    max-height: 100%;
+    min-height: 100%;
+    padding-top: 50px;
+}
+.jumbo-index
+{
+    height: 1400px;
+}
     
 }
 
@@ -122,4 +131,56 @@ header{
 }
 
 }
+
+ @media only screen and (min-width:960px){
+        /* styles for browsers larger than 960px; */
+    }
+    @media only screen and (min-width:1440px){
+        /* styles for browsers larger than 1440px; */
+    }
+    @media only screen and (min-width:2000px){
+        /* for sumo sized (mac) screens */
+    }
+    @media only screen and (max-device-width:480px){
+       /* styles for mobile browsers smaller than 480px; (iPhone) */
+        .login{
+    margin:0;
+}
+.input-logo {
+    display:none;
+}
+.input-type {
+    width:100%;
+    }
+    .input-search{
+        width: 80%;
+    }
+/*
+.jumbotron{
+    min-height: 430px;
+    max-height: 520px;
+    padding-top: 50px;
+    }
+    */
+.jumbotron {
+    max-height: 100%;
+    min-height: 100%;
+    padding-top: 50px;
+}
+.jumbo-index
+{
+    height: 1400px;
+}
+    }
+    @media only screen and (device-width:768px){
+       /* default iPad screens */
+    }
+    /* different techniques for iPad screening */
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+      /* For portrait layouts only */
+    }
+
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+      /* For landscape layouts only */
+    }
 
