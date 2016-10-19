@@ -26,306 +26,307 @@
 			</div>
 		</div>
 	</header>
-
-	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="3"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="4"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="5"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="6"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="7"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="8"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="9"></li>
-		</ol>
-
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner text-center" role="listbox">
-			<div class="item active">
-				<img src="../img/fondoEncuesta.jpg" alt="Fondo encuesta">
-				<div class="carousel-caption">
-					<div class="container">
-						<!--Subir Foto-->
-						<div class="form-group row">
-							<div class="col-xs-4 col-xs-offset-3">
-								<div class="media">
-									<div class="media-middle media-middle">
-										<label for="exampleInputFile">Imagen</label>
-										<a href="#">
-											<img class="media-object" class="img-responsive" src="../img/no-user.png" alt="no-user">
-										</a>
-									</div>
-									<div class="media-body">
-										<input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">		
+<!--http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-carousel.php-->
+	<div class="Elcarousel">
+		<div id="carouselEncuesta" class="carousel slide">
+			<!-- Caurosel Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carouselEncuesta" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselEncuesta" data-slide-to="1"></li>
+				<li data-target="#carouselEncuesta" data-slide-to="2"></li>
+				<li data-target="#carouselEncuesta" data-slide-to="3"></li>
+				<li data-target="#carouselEncuesta" data-slide-to="4"></li>
+				<li data-target="#carouselEncuesta" data-slide-to="5"></li>
+				<li data-target="#carouselEncuesta" data-slide-to="6"></li>
+				<li data-target="#carouselEncuesta" data-slide-to="7"></li>
+				<li data-target="#carouselEncuesta" data-slide-to="8"></li>
+				<li data-target="#carouselEncuesta" data-slide-to="9"></li>
+			</ol>
+			<!-- Wrapper for Carousel itaems -->
+			<div class="carousel-inner text-center">
+				<div class="item active">
+					<img src="../img/fondoEncuesta.jpg" alt="Fondo encuesta">
+					<div class="carousel-caption">
+						<div class="container">
+							<!--Subir Foto-->
+							<div class="form-group row">
+								<div class="col-xs-4 col-xs-offset-3">
+									<div class="media">
+										<div class="media-middle media-middle">
+											<label for="exampleInputFile">Imagen</label>
+											<a href="#">
+												<img class="media-object" class="img-responsive" src="../img/no-user.png" alt="no-user">
+											</a>
+										</div>
+										<div class="media-body">
+											<input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">		
+										</div>
 									</div>
 								</div>
-							</div>
+							</div>					
 						</div>					
-					</div>					
+					</div>
 				</div>
-			</div>
-			<div class="item">
-				<img src="../img/fondoEncuesta.jpg" alt="Fondo encuesta">
-				<div class="carousel-caption">
-					<div class="container">
-						<!--Clave Unica-->
-						<div class="form-group row">
-							<label for="example-number-input" class="col-xs-4 col-form-label">Clave Unica:</label>
-							<div class="col-xs-5">
-								<input class="form-control" type="number" id="example-number-input" placeholder="000000">
+				<div class="item">
+					<img src="../img/fondoEncuesta.jpg" alt="Fondo encuesta">
+					<div class="carousel-caption">
+						<div class="container">
+							<!--Clave Unica-->
+							<div class="form-group row">
+								<label for="example-number-input" class="col-xs-4 col-form-label">Clave Unica:</label>
+								<div class="col-xs-5">
+									<input class="form-control" type="number" id="example-number-input" placeholder="000000">
+								</div>
 							</div>
-						</div>
-						<!--Nombre-->
-						<div class="form-group row">
-							<label for="example-text-input" class="col-xs-4 col-form-label">Nombre:</label>
-							<div class="col-xs-5">
-								<input class="form-control" type="text" id="example-text-input" placeholder="Nombre">
+							<!--Nombre-->
+							<div class="form-group row">
+								<label for="example-text-input" class="col-xs-4 col-form-label">Nombre:</label>
+								<div class="col-xs-5">
+									<input class="form-control" type="text" id="example-text-input" placeholder="Nombre">
+								</div>
 							</div>
-						</div>
-						<!--Email-->
-						<div class="form-group row">
-							<label for="example-email-input" class="col-xs-4 col-form-label">Email: </label>
-							<div class="col-xs-5">
-								<input class="form-control" type="email" id="example-email-input" placeholder="tuEmail@example.com">
-								<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+							<!--Email-->
+							<div class="form-group row">
+								<label for="example-email-input" class="col-xs-4 col-form-label">Email: </label>
+								<div class="col-xs-5">
+									<input class="form-control" type="email" id="example-email-input" placeholder="tuEmail@example.com">
+									<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+								</div>
 							</div>
-						</div>
-						<!--Edad-->
-						<div class="form-group row">
-							<label for="example-number-input" class="col-xs-4 col-form-label">Edad:</label>
-							<div class="col-xs-5">
-								<input class="form-control" type="number" id="example-number-input" placeholder="00">
+							<!--Edad-->
+							<div class="form-group row">
+								<label for="example-number-input" class="col-xs-4 col-form-label">Edad:</label>
+								<div class="col-xs-5">
+									<input class="form-control" type="number" id="example-number-input" placeholder="00">
+								</div>
 							</div>
-						</div>
-						<!--Preparatoria-->
-						<div class="form-group row">
-							<label for="example-text-input" class="col-xs-4 col-form-label">Preparatoria:</label>
-							<div class="col-xs-5">
-								<input class="form-control" type="text" id="example-text-input" placeholder="Preparatoria">
-							</div>
-						</div>	
-						<!--Delegacion donde vive actualmente-->
-						<div class="form-group row">
-							<label for="example-text-input" class="col-xs-4 col-form-label">Delegacion donde vive actualmente:</label>
-							<div class="col-xs-5">
-								<input class="form-control" type="text" id="example-text-input" placeholder="Delegacion">
+							<!--Preparatoria-->
+							<div class="form-group row">
+								<label for="example-text-input" class="col-xs-4 col-form-label">Preparatoria:</label>
+								<div class="col-xs-5">
+									<input class="form-control" type="text" id="example-text-input" placeholder="Preparatoria">
+								</div>
+							</div>	
+							<!--Delegacion donde vive actualmente-->
+							<div class="form-group row">
+								<label for="example-text-input" class="col-xs-4 col-form-label">Delegacion donde vive actualmente:</label>
+								<div class="col-xs-5">
+									<input class="form-control" type="text" id="example-text-input" placeholder="Delegacion">
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="item">
-				<img src="../img/fondoEncuesta.jpg" alt="...">
-				<div class="carousel-caption">
-					<div class="container">
-						<!--Estudia en otra escuela-->
-						<fieldset class="form-group">
-							<div class="col-xs-5 col-xs-offset-2">
-								<legend>Estudia en otra escuela</legend>
+				<div class="item">
+					<img src="../img/fondoEncuesta.jpg" alt="...">
+					<div class="carousel-caption">
+						<div class="container">
+							<!--Estudia en otra escuela-->
+							<fieldset class="form-group">
+								<div class="col-xs-5 col-xs-offset-2">
+									<legend>Estudia en otra escuela</legend>
+									<div class="form-check">
+										<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">
+											<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>Si
+										</button>
+									</div>	
+									<div id="demo" class="collapse">
+										<label for="example-text-input" class="col-xs-3 col-form-label">¿Qué estudia?</label>
+										<div class="col-xs-10">
+											<input class="form-control" type="text" id="example-text-input" placeholder="Estudio">
+										</div>
+										<label for="example-text-input" class="col-xs-3 col-form-label">¿En dónde?</label>
+										<div class="col-xs-10">
+											<input class="form-control" type="text" id="example-text-input" placeholder="Lugar">
+										</div>
+									</div>						
+									<div class="form-check">
+										<label class="form-check-label">
+											<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">No
+										</label>
+									</div>								
+								</div>			
+							</fieldset>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="../img/fondoEncuesta.jpg" alt="...">
+					<div class="carousel-caption">
+						<div class="container">
+							<!--Trabaja-->
+							<fieldset class="form-group">
+								<legend>Trabaja</legend>
 								<div class="form-check">
-									<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">
-										<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>Si
+									<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">
+										<input type="radio" class="form-check-input" name="optionsRadios2" id="optionsRadios1" value="option1" checked>Si
 									</button>
-								</div>	
-								<div id="demo" class="collapse">
-								<label for="example-text-input" class="col-xs-3 col-form-label">¿Qué estudia?</label>
-									<div class="col-xs-10">
-										<input class="form-control" type="text" id="example-text-input" placeholder="Estudio">
+									<div id="demo2" class="collapse">
+										<label for="example-text-input" class="col-xs-2 col-form-label">¿En dónde?</label>
+										<div class="col-xs-10">
+											<input class="form-control" type="text" id="example-text-input" placeholder="Lugar">
+										</div>
+										<label for="example-text-input" class="col-xs-2 col-form-label">Puesto</label>
+										<div class="col-xs-10">
+											<input class="form-control" type="text" id="example-text-input" placeholder="Puesto">
+										</div>
 									</div>
-									<label for="example-text-input" class="col-xs-3 col-form-label">¿En dónde?</label>
-									<div class="col-xs-10">
-										<input class="form-control" type="text" id="example-text-input" placeholder="Lugar">
-									</div>
-								</div>						
+								</div>
 								<div class="form-check">
 									<label class="form-check-label">
-										<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">No
+										<input type="radio" class="form-check-input" name="optionsRadios2" id="optionsRadios2" value="option2">No
 									</label>
-								</div>								
-							</div>			
-						</fieldset>
+								</div>			
+							</fieldset>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="item">
-				<img src="../img/fondoEncuesta.jpg" alt="...">
-				<div class="carousel-caption">
-					<div class="container">
-						<!--Trabaja-->
-						<fieldset class="form-group">
-							<legend>Trabaja</legend>
-							<div class="form-check">
-								<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">
-									<input type="radio" class="form-check-input" name="optionsRadios2" id="optionsRadios1" value="option1" checked>Si
-								</button>
-								<div id="demo2" class="collapse">
-									<label for="example-text-input" class="col-xs-2 col-form-label">¿En dónde?</label>
-									<div class="col-xs-10">
-										<input class="form-control" type="text" id="example-text-input" placeholder="Lugar">
-									</div>
-									<label for="example-text-input" class="col-xs-2 col-form-label">Puesto</label>
-									<div class="col-xs-10">
-										<input class="form-control" type="text" id="example-text-input" placeholder="Puesto">
-									</div>
-								</div>
-							</div>
-							<div class="form-check">
-								<label class="form-check-label">
-									<input type="radio" class="form-check-input" name="optionsRadios2" id="optionsRadios2" value="option2">No
-								</label>
-							</div>			
-						</fieldset>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<img src="../img/fondoEncuesta.jpg" alt="...">
-				<div class="carousel-caption">
-					<div class="container">
-						<!--Financiamiento-->
-						<fieldset class="form-group">
-							<legend>Ayuda financiera</legend>
-							<div class="form-check">
-								<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3">
-									<input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios1" value="option1" checked>Beca
-								</button>
-								<div id="demo3" class="collapse">
-									<label for="example-number-input" class="col-xs-2 col-form-label">Porcentaje:</label>
-									<div class="col-xs-10">
-										<input class="form-control" type="number" id="example-number-input" placeholder="00%">
-									</div>
-								</div>
-							</div>
-							<div class="form-check">
-								<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo4">
-									<input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios1" value="option1" checked>Prestamo
-								</button>
-								<div id="demo4" class="collapse">
-									<label for="example-number-input" class="col-xs-2 col-form-label">Porcentaje:</label>
-									<div class="col-xs-10">
-										<input class="form-control" type="number" id="example-number-input" placeholder="00%">
-									</div>
-								</div>
-							</div>
-							<div class="form-check">
-								<label class="form-check-label">
-									<input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios1" value="option1" checked>Niniguno
-								</label>				
-							</div>			
-						</fieldset>
-					</div>
-				</div>
-			</div>			
-			<div class="item">
-				<img src="../img/fondoEncuesta.jpg" alt="...">
-				<div class="carousel-caption">
-					<div class="container">
-						<!--Procendencia-->
-						<fieldset class="form-group">
-							<legend>Procedencia</legend>
-							<div class="form-check">
-								<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo5">
-									<input type="radio" class="form-check-input" name="optionsRadios4" id="optionsRadios1" value="option1" checked>¿Foráneo?
-								</button>
-								<div id="demo5" class="collapse">
-									<div class="form-group row">
-										<label for="example-text-input" class="col-xs-2 col-form-label">¿De dónde?</label>
+				<div class="item">
+					<img src="../img/fondoEncuesta.jpg" alt="...">
+					<div class="carousel-caption">
+						<div class="container">
+							<!--Financiamiento-->
+							<fieldset class="form-group">
+								<legend>Ayuda financiera</legend>
+								<div class="form-check">
+									<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3">
+										<input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios1" value="option1" checked>Beca
+									</button>
+									<div id="demo3" class="collapse">
+										<label for="example-number-input" class="col-xs-2 col-form-label">Porcentaje:</label>
 										<div class="col-xs-10">
-											<input class="form-control" type="text" id="example-text-input" placeholder="Estado">
+											<input class="form-control" type="number" id="example-number-input" placeholder="00%">
 										</div>
 									</div>
 								</div>
 								<div class="form-check">
-									<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo6">
-										<input type="radio" class="form-check-input" name="optionsRadios4" id="optionsRadios1" value="option1" checked>¿Extranjero?
+									<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo4">
+										<input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios1" value="option1" checked>Prestamo
 									</button>
-									<div id="demo6" class="collapse">
-										<label for="example-text-input" class="col-xs-2 col-form-label">¿De dónde?</label>
+									<div id="demo4" class="collapse">
+										<label for="example-number-input" class="col-xs-2 col-form-label">Porcentaje:</label>
 										<div class="col-xs-10">
-											<input class="form-control" type="text" id="example-text-input" placeholder="País">
+											<input class="form-control" type="number" id="example-number-input" placeholder="00%">
 										</div>
 									</div>
 								</div>
 								<div class="form-check">
 									<label class="form-check-label">
-										<input type="radio" class="form-check-input" name="optionsRadios4" id="optionsRadios1" value="option1" checked>Niniguno
+										<input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios1" value="option1" checked>Niniguno
 									</label>				
-								</div>
-							</div>			
-						</fieldset>
-					</div>					
-				</div>				
-			</div>
-			<div class="item">
-				<img src="../img/fondoEncuesta.jpg" alt="...">
-				<div class="carousel-caption">
-					<div class="container">
-						<!--Actividades-->
-						<div class="form-group">
-							<label for="exampleTextarea">¿En qué tipo de actividad deportiva, cultural, académica te gustaría participar?</label>
-							<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+								</div>			
+							</fieldset>
+						</div>
+					</div>
+				</div>			
+				<div class="item">
+					<img src="../img/fondoEncuesta.jpg" alt="...">
+					<div class="carousel-caption">
+						<div class="container">
+							<!--Procendencia-->
+							<fieldset class="form-group">
+								<legend>Procedencia</legend>
+								<div class="form-check">
+									<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo5">
+										<input type="radio" class="form-check-input" name="optionsRadios4" id="optionsRadios1" value="option1" checked>¿Foráneo?
+									</button>
+									<div id="demo5" class="collapse">
+										<div class="form-group row">
+											<label for="example-text-input" class="col-xs-2 col-form-label">¿De dónde?</label>
+											<div class="col-xs-10">
+												<input class="form-control" type="text" id="example-text-input" placeholder="Estado">
+											</div>
+										</div>
+									</div>
+									<div class="form-check">
+										<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo6">
+											<input type="radio" class="form-check-input" name="optionsRadios4" id="optionsRadios1" value="option1" checked>¿Extranjero?
+										</button>
+										<div id="demo6" class="collapse">
+											<label for="example-text-input" class="col-xs-2 col-form-label">¿De dónde?</label>
+											<div class="col-xs-10">
+												<input class="form-control" type="text" id="example-text-input" placeholder="País">
+											</div>
+										</div>
+									</div>
+									<div class="form-check">
+										<label class="form-check-label">
+											<input type="radio" class="form-check-input" name="optionsRadios4" id="optionsRadios1" value="option1" checked>Niniguno
+										</label>				
+									</div>
+								</div>			
+							</fieldset>
+						</div>					
+					</div>				
+				</div>
+				<div class="item">
+					<img src="../img/fondoEncuesta.jpg" alt="...">
+					<div class="carousel-caption">
+						<div class="container">
+							<!--Actividades-->
+							<div class="form-group">
+								<label for="exampleTextarea">¿En qué tipo de actividad deportiva, cultural, académica te gustaría participar?</label>
+								<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="../img/fondoEncuesta.jpg" alt="...">
+					<div class="carousel-caption">
+						<div class="container">
+							<!--Pasatiempos-->
+							<div class="form-group">
+								<label for="exampleTextarea">¿tienes algún hobby, pasatiempo o realizas alguna actividad extracurriculaeres?</label>
+								<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="../img/fondoEncuesta.jpg" alt="...">
+					<div class="carousel-caption">
+						<div class="container">
+							<!--Felicidad-->
+							<div class="form-group">
+								<label for="exampleTextarea">Serías más feliz en el ITAM si:</label>
+								<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="../img/fondoEncuesta.jpg" alt="...">
+					<div class="carousel-caption">
+						<div class="container">
+							<!--Comentarios-->
+							<div class="form-group">
+								<label for="exampleTextarea">Recomendaciones o comentarios en general que quisiera hacernos</label>
+								<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="../img/fondoEncuesta.jpg" alt="...">
+					<div class="carousel-caption">
+						<div class="container">
+							<button type="submit" class="btn btn-primary">Submit</button>				
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="item">
-				<img src="../img/fondoEncuesta.jpg" alt="...">
-				<div class="carousel-caption">
-					<div class="container">
-						<!--Pasatiempos-->
-						<div class="form-group">
-							<label for="exampleTextarea">¿tienes algún hobby, pasatiempo o realizas alguna actividad extracurriculaeres?</label>
-							<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<img src="../img/fondoEncuesta.jpg" alt="...">
-				<div class="carousel-caption">
-					<div class="container">
-						<!--Felicidad-->
-						<div class="form-group">
-							<label for="exampleTextarea">Serías más feliz en el ITAM si:</label>
-							<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<img src="../img/fondoEncuesta.jpg" alt="...">
-				<div class="carousel-caption">
-					<div class="container">
-						<!--Comentarios-->
-						<div class="form-group">
-							<label for="exampleTextarea">Recomendaciones o comentarios en general que quisiera hacernos</label>
-							<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<img src="../img/fondoEncuesta.jpg" alt="...">
-				<div class="carousel-caption">
-					<div class="container">
-						<button type="submit" class="btn btn-primary">Submit</button>				
-					</div>
-				</div>
-			</div>
-		</div>
 
-		<!-- Controls -->
-		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carouselEncuesta" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#carouselEncuesta" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
 	</div>
 </div>
 
