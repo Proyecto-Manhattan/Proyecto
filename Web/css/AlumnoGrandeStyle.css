@@ -1,17 +1,22 @@
-html,body,h1,h2,h3,h4,h5,h6 {
+html,body,h1,h2,h3,h4,h5,h6,p {
 	font-family: "Roboto", sans-serif;
 }
 
-.w3-container {
-	max-width:1400px;
+#contenedor {
+	max-width:1200px;
+}
+
+#contenedor2{
+	margin-top: 10px
 }
 
 .w3-row-padding{
 	margin:0 -16px;
 }
 
-.img-responsive{
+#imagenNoUser{
 	width:100%;
+
 }
 
 #barra{
