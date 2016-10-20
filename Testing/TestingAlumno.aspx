@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
     <div class="w3-container">
@@ -16,7 +17,7 @@
     <div class="w3-container w3-center">
       <h3>Friend Request</h3>
       <img src="img/avatar_png.png" alt="Avatar" style="width:80%"/>
-      <h5 id="claveUnica">CLAVE UNICA</h5>
+      <h5 id="claveUnica" runat="server">CLAVE UNICA</h5>
         <div class="w3-progress-container">
   <div id="myBar" class="w3-progressbar w3-green w3-round-xlarge" style="width:25%">
     <div class="w3-center w3-text-white">25%</div>

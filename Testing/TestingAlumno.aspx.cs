@@ -31,13 +31,11 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
 
         if (con != null)
         {
-            OdbcCommand cmd = new OdbcCommand("SELECT vendedor.nombre FROM vendedor", con);
+            OdbcCommand cmd = new OdbcCommand("SELECT alumno.claveU FROM alumno", con);
             OdbcDataReader dr = cmd.ExecuteReader();
-            DropDownList1.Items.Clear();
-
             while (dr.Read())
             {
-                DropDownList1.Items.Add(dr.GetString(0));
+                claveUnica.InnerText = dr.GetString(0);
             }
 
             dr.Close();
