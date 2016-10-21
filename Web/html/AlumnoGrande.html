@@ -28,7 +28,7 @@
 
 <body class="w3-light-grey">
 	<!-- Page Container -->
-	<div class="w3-container w3-content w3-margin-top" ">
+	<div class="w3-container w3-content w3-margin-top" id="contenedor">
 
 		<!-- The Grid -->
 		<div class="w3-row-padding">
@@ -38,40 +38,40 @@
 
 				<div class="w3-white w3-text-grey w3-card-4">
 					<div class="w3-display-container">
-						<img src="../img/no-user.png" class="img-responsive" alt="Avatar">
+						<img src="../img/no-user.png" id="imagenNoUser" alt="Avatar">
 						<div class="w3-display-bottomleft w3-container w3-text-black">
-							<h3>Jane Doe</h3>
+							<h3>Nombre Apellido</h3>
 							<h5>Clave Unica</h5>
 							<p>Edad</p>
 						</div>
 					</div>
-					<div class="w3-container">
+					<div class="w3-container" id="contenedor2">
 						<p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Programa</p>
-						<p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>London, UK</p>
+						<p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Estado, País</p>
 						<p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>ex@mail.com</p>
 						<p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>1224435534</p>
 						<hr>
 
 						<p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-						<p>Adobe Photoshop</p>
+						<p>Computación</p>
 						<div class="w3-progress-container w3-round-xlarge w3-small">
 							<div class="w3-progressbar w3-round-xlarge w3-teal" id="barra">
 								<div class="w3-center w3-text-white">90%</div>
 							</div>
 						</div>
-						<p>Photography</p>
+						<p>Matemáticas</p>
 						<div class="w3-progress-container w3-round-xlarge w3-small">
 							<div class="w3-progressbar w3-round-xlarge w3-teal" id="barra2">
 								<div class="w3-center w3-text-white">80%</div>
 							</div>
 						</div>
-						<p>Illustrator</p>
+						<p>Estudios Generales</p>
 						<div class="w3-progress-container w3-round-xlarge w3-small">
 							<div class="w3-progressbar w3-round-xlarge w3-teal" id="barra3">
 								<div class="w3-center w3-text-white">75%</div>
 							</div>
 						</div>
-						<p>Media</p>
+						<p>Otros</p>
 						<div class="w3-progress-container w3-round-xlarge w3-small">
 							<div class="w3-progressbar w3-round-xlarge w3-teal" id="barra4">
 								<div class="w3-center w3-text-white">50%</div>
@@ -80,15 +80,15 @@
 						<br>
 
 						<p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-						<p>English</p>
+						<p>Español</p>
 						<div class="w3-progress-container w3-round-xlarge">
 							<div class="w3-progressbar w3-round-xlarge w3-teal" id="barra5"></div>
 						</div>
-						<p>Spanish</p>
+						<p>Ingles</p>
 						<div class="w3-progress-container w3-round-xlarge">
 							<div class="w3-progressbar w3-round-xlarge w3-teal" id="barra6"></div>
 						</div>
-						<p>German</p>
+						<p>Otros</p>
 						<div class="w3-progress-container w3-round-xlarge">
 							<div class="w3-progressbar w3-round-xlarge w3-teal" id="barra7"></div>
 						</div>
@@ -105,43 +105,64 @@
 
 
 				<div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-					<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+					<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-inbox fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Datos Personales</h2>
 					<div class="w3-container">
-						<h5 class="w3-opacity"><b>Front End Developer / w3schools.com</b></h5>
-						<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-						<p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+						<h5 class="w3-opacity"><b>Universidad</b></h5>
+						<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span class="w3-tag w3-teal w3-round">Current</span></h6>		
 						<hr>
 					</div>
 					<div class="w3-container">
-						<h5 class="w3-opacity"><b>Web Developer / something.com</b></h5>
+						<h5 class="w3-opacity"><b>Preparatoria</b></h5>
 						<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6>
-						<p>Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
 						<hr>
 					</div>
 					<div class="w3-container">
-						<h5 class="w3-opacity"><b>Graphic Designer / designsomething.com</b></h5>
+						<h5 class="w3-opacity"><b>Delegacion donde vive actualmente</b></h5>
 						<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 - Mar 2012</h6>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p><br>
+						<p>Calle Río Hondo #1, Alvaro Obregon, Progreso Tizapán, 01080 Ciudad de México, D.F.</p><br>
+					</div>
+				</div>
+
+				<div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+					<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-institution fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Institucion</h2>
+					<div class="w3-container">
+						<h5 class="w3-opacity"><b>Estudia en otra escuela</b></h5>
+						<p>Web Development! All I need to know in one place</p>
+						<p>Web Development! All I need to know in one place</p>		
+						<hr>
+					</div>
+					<div class="w3-container">
+						<h5 class="w3-opacity"><b>Trabaja</b></h5>
+						<p>Web Development! All I need to know in one place</p>
+						<p>Web Development! All I need to know in one place</p>	
+						<hr>
+					</div>
+					<div class="w3-container">
+						<h5 class="w3-opacity"><b>Ayuda financiera</b></h5>
+						<p>Web Development! All I need to know in one place</p>
+						<br>
 					</div>
 				</div>
 
 				<div class="w3-container w3-card-2 w3-white">
-					<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+					<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Intereses</h2>
 					<div class="w3-container">
-						<h5 class="w3-opacity"><b>W3Schools.com</b></h5>
-						<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Forever</h6>
+						<h5 class="w3-opacity"><b>Actividad deportiva, cultural, académica que le gustaría participar</b></h5>						
 						<p>Web Development! All I need to know in one place</p>
 						<hr>
 					</div>
 					<div class="w3-container">
-						<h5 class="w3-opacity"><b>London Business School</b></h5>
-						<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
+						<h5 class="w3-opacity"><b>Hobby, pasatiempo o realiza alguna actividad extracurriculaeres</b></h5>						
 						<p>Master Degree</p>
 						<hr>
 					</div>
 					<div class="w3-container">
-						<h5 class="w3-opacity"><b>School of Coding</b></h5>
-						<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2013</h6>
+						<h5 class="w3-opacity"><b>Serías más feliz en el ITAM si:</b></h5>						
+						<p>Master Degree</p>
+						<hr>
+					</div>
+					<div class="w3-container">
+						<h5 class="w3-opacity"><b>Recomendaciones o comentarios en general que quisiera hacernos</b></h5>						
 						<p>Bachelor Degree</p><br>
 					</div>
 				</div>
