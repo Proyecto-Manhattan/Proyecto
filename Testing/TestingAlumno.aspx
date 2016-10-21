@@ -11,18 +11,19 @@
 </head>
 <body>
         <header class="w3-container">
-           <ul class="w3-navbar w3-light-green">
-    <li><a href="#" class="w3-padding-16 ">Home</a></li>
-    <li><a href="#" class="w3-padding-16 ">Link 1</a></li>
-    <li><a href="#" class="w3-padding-16 ">Link 2</a></li>
-    <li><a href="#" class="w3-padding-16 ">Link 3</a></li>
-    <li class="w3-navitem w3-right">
-      <input type="text" class="w3-input w3-border-0" placeholder="Search for claveUnicas.." id="myInput" onkeyup="myFunction()"/>
-    </li>
-    <li class="w3-navitem w3-right">
-      <input type="text" class="w3-input w3-border-0" placeholder="Search for names.." id="myInput2" onkeyup="myFunction2()"/>
-    </li>
-  </ul>
+                           <ul class="w3-navbar w3-light-green">
+                    <li><a href="#" class="w3-padding-16 ">Home</a></li>
+                    <li><a href="#" class="w3-padding-16 ">Link 1</a></li>
+                    <li><a href="#" class="w3-padding-16 ">Link 2</a></li>
+                    <li><a href="#" class="w3-padding-16 ">Link 3</a></li>
+                    <li class="w3-navitem w3-right">
+                      <input type="text" class="w3-input w3-border-0" placeholder="Search for claveUnicas.." id="myInput" onkeyup="myFunction()"/>
+                    </li>
+                    <li class="w3-navitem w3-right">
+                      <input type="text" class="w3-input w3-border-0" placeholder="Search for names.." id="myInput2" onkeyup="myFunction2()"/>
+                    </li>
+                  </ul>
+
         </header>
     <div  class="w3-container">
         <div class="w3-row" id="cards" runat="server">
@@ -72,5 +73,6 @@
 
         }
 </script>
+
 </body>
 </html>
