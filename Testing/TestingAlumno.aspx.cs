@@ -45,16 +45,50 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
         }
     }
 
-    private String createCard(String nombre,String clave)
+    private String createCard(String clave,String nombre,String apellido,String semestre)
     {
         String card ="<section class='w3-col w3-container m3 l3 w3-teal'><div class='w3-card-8 w3-dark-grey' style='width:100%'>"
-          + "<div class='w3-container w3-center'><h3>" + nombre + "</h3><img src='img/avatar_png.png' alt='Avatar' style='width:50%'/>"
-          + "<h5 id='claveUnica' runat='server'style='max-height:50px'>" + clave + "</h5><div class='w3-progress-container'><div id='myBar' class='w3-progressbar w3-green w3-round-xlarge' style='width:25%'>"
+          + "<div class='w3-container w3-center'><h3>" + clave + "</h3><img src='img/avatar_png.png' alt='Avatar' style='width:50%'/>"
+          + "<h5 id='claveUnica' runat='server'style='max-height:50px'>" + nombre + "</h5><div class='w3-progress-container'><div id='myBar' class='w3-progressbar w3-green w3-round-xlarge' style='width:25%'>"
           + "<div class='w3-center w3-text-white'>25%</div></div></div><div class='w3-progress-container'><div id='Div1' class='w3-progressbar w3-red w3-round-xlarge' style='width:25%'>"
           + "<div class='w3-center w3-text-white'>25%</div></div></div><div class='w3-progress-container'><div id='Div2' class='w3-progressbar w3-blue w3-round-xlarge' style='width:25%'>"
           + "<div class='w3-center w3-text-white'>25%</div></div></div><div class='w3-progress-container'><div id='Div3' class='w3-progressbar w3-green w3-round-xlarge' style='width:25%'>"
           + "<div class='w3-center w3-text-white'>25%</div></div></div><div class='w3-section'><button class='w3-btn w3-green'>Accept</button>"
           + "<button class='w3-btn w3-red'>Decline</button></div></div></div></section>";
+
+
+
+
+          String card2 = "<section class='w3-col w3-container m3 l3 w3-teal'>"
+        +"<div class='w3-card-8 w3-dark-grey' style='width:100%'>"
+        +   "<div class='w3-container w3-center'>"
+        +      "<h3 class='w3-text-lime'>"
+                   + clave +
+        +      "</h3>"
+        +      "<img src='img/avatar_png.png' alt='Avatar' style='width:50%'/>"
+        +      "<h5 id='nombre' runat='server' style='height:15px' class='w3-text-white'>"
+                    + nombre +
+        +      "</h5>"
+        +      "<h5 id='apellido' runat='server' style='height:15px' class='w3-text-white'>"
+                    + apellido +
+        +      "</h5>"
+        +      "<div id='semestre' class='w3-text-green'>"
+                 +   "Semestre :" + semestre +
+        +       "</div>"
+        +       "<div id='carrera' runat='server' style='height:15px' class='w3-text-amber'>"
+                    + carrera +
+        +       "</div>"
+        +       "<div class='w3-section'>"
+        +       "<button class='w3-btn w3-green'>"
+                  +      "Accept"
+        +       "</button>"
+        +       "<button class='w3-btn w3-red'>"
+                    +  "Decline"
+        +       "</button>"
+        +      "</div>"
+        +   "</div>"
+        +"</div>"
+        +"</section>";
 
         card.Replace('"', '$');
         card.Replace('\'', '"');
