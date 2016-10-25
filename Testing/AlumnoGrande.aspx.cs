@@ -26,7 +26,22 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
     }
     protected void Page_Load(object sender, EventArgs e)
     {
+        OdbcConnection con = conectarBD();
 
+        if (con != null)
+        {
+            //OdbcCommand cmd = new OdbcCommand("SELECT alumno.claveU,alumno.nombre FROM alumno ORDER BY alumno.claveU", con);
+            OdbcCommand cmd = new OdbcCommand("SELECT alumnos.claveU,alumnos.nombre,alumnos.apellido,alumnos.semestre,alumnos.carrera FROM alumnos ORDER BY alumnos.claveU", con);
+            OdbcDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                if (!dr.IsDBNull(0))
+                    vista.InnerHtml = vista.InnerHtml + vista(dr.GetInt32(0).ToString(), dr.GetString(1), dr.GetString(2), dr.GetInt32(3).ToString(), dr.GetString(4));
+                //cards.InnerHtml = cards.InnerHtml + createCard(dr.GetString(0), dr.GetString(1));
+            }
+
+            dr.Close();
+        }
     }
 
     private String CreateAlumno(String nombre,
@@ -80,6 +95,7 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
         HobOactivExtra = "nada";
         felicidad = "nada";
         comentarios = "nada";
+
         String vista = "<!-- Page Container -->"
     + "<div class='w3-container w3-content w3-margin-top' id='contenedor'>"
 
