@@ -45,7 +45,7 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
         }
     }
 
-    private String createCard(String clave,String nombre,String apellido,String semestre)
+    private String createCard(String clave,String nombre,String apellido,String semestre,String carrera)
     {
         String card ="<section class='w3-col w3-container m3 l3 w3-teal'><div class='w3-card-8 w3-dark-grey' style='width:100%'>"
           + "<div class='w3-container w3-center'><h3>" + clave + "</h3><img src='img/avatar_png.png' alt='Avatar' style='width:50%'/>"
@@ -59,35 +59,36 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
 
 
 
-          String card2 = "<section class='w3-col w3-container m3 l3 w3-teal'>"
-        +"<div class='w3-card-8 w3-dark-grey' style='width:100%'>"
-        +   "<div class='w3-container w3-center'>"
-        +      "<h3 class='w3-text-lime'>"
-                   + clave +
-        +      "</h3>"
-        +      "<img src='img/avatar_png.png' alt='Avatar' style='width:50%'/>"
-        +      "<h5 id='nombre' runat='server' style='height:15px' class='w3-text-white'>"
-                    + nombre +
-        +      "</h5>"
-        +      "<h5 id='apellido' runat='server' style='height:15px' class='w3-text-white'>"
-                    + apellido +
-        +      "</h5>"
-        +      "<div id='semestre' class='w3-text-green'>"
-                 +   "Semestre :" + semestre +
+          String card2 = ""
+        +"<section class='w3-col w3-container m3 l3 w3-teal'>"
+        +   "<div class='w3-card-8 w3-dark-grey' style='width:100%'>"
+        +       "<div class='w3-container w3-center'>"
+        +           "<h3 class='w3-text-lime'>"
+                        + clave +
+        +           "</h3>"
+        +           "<img src='img/avatar_png.png' alt='Avatar' style='width:50%'/>"
+        +           "<h5 id='nombre' runat='server' style='height:15px' class='w3-text-white'>"
+                        + nombre +
+        +           "</h5>"
+        +           "<h5 id='apellido' runat='server' style='height:15px' class='w3-text-white'>"
+                        + apellido +
+        +           "</h5>"
+        +           "<div id='semestre' class='w3-text-green'>"
+                        +   "Semestre :" + semestre +
+        +           "</div>"
+        +           "<div id='carrera' runat='server' style='height:15px' class='w3-text-amber'>"
+                        + carrera +
+        +           "</div>"
+        +           "<div class='w3-section'>"
+        +               "<button class='w3-btn w3-green'>"
+                            +"Accept"
+        +               "</button>"
+        +               "<button class='w3-btn w3-red'>"
+                            +"Decline"
+        +               "</button>"
+        +           "</div>"
         +       "</div>"
-        +       "<div id='carrera' runat='server' style='height:15px' class='w3-text-amber'>"
-                    + carrera +
-        +       "</div>"
-        +       "<div class='w3-section'>"
-        +       "<button class='w3-btn w3-green'>"
-                  +      "Accept"
-        +       "</button>"
-        +       "<button class='w3-btn w3-red'>"
-                    +  "Decline"
-        +       "</button>"
-        +      "</div>"
         +   "</div>"
-        +"</div>"
         +"</section>";
 
         card.Replace('"', '$');
