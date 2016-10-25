@@ -36,11 +36,40 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
             while (dr.Read())
             {
                 if (!dr.IsDBNull(0))
-                    vista.InnerHtml = vista.InnerHtml + vista(dr.GetInt32(0).ToString(), dr.GetString(1), dr.GetString(2), dr.GetInt32(3).ToString(), dr.GetString(4));
+                    vista.InnerHtml = vista.InnerHtml + CreateAlumno(dr.GetString(0), 
+                                                                     dr.GetString(1), 
+                                                                     dr.GetString(2), 
+                                                                     dr.GetString(3), 
+                                                                     dr.GetString(4), 
+                                                                     dr.GetString(5), 
+                                                                     dr.GetString(6), 
+                                                                     dr.GetString(7),
+                                                                     dr.GetString(8),
+                                                                     dr.GetString(9),
+                                                                     dr.GetString(10),
+                                                                     dr.GetString(11),
+                                                                     dr.GetString(12),
+                                                                     dr.GetString(13),
+                                                                     dr.GetString(14),
+                                                                     dr.GetString(15),
+                                                                     dr.GetString(16),
+                                                                     dr.GetString(17),
+                                                                     dr.GetString(18),
+                                                                     dr.GetString(19),
+                                                                     dr.GetString(20),
+                                                                     dr.GetString(21),
+                                                                     dr.GetString(22),
+                                                                     dr.GetString(23),
+                                                                     dr.GetString(24));
                 //cards.InnerHtml = cards.InnerHtml + createCard(dr.GetString(0), dr.GetString(1));
+                
             }
 
             dr.Close();
+        }
+        else
+        {
+            vista.InnerHtml = vista.InnerHtml + CreateAlumno("","","","","", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "");
         }
     }
 
@@ -107,7 +136,7 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
 
                 + "<div class='w3-white w3-text-grey w3-card-4'>"
                     + "<div class='w3-display-container'>"
-                        + "<img src='../img/no-user.png' id='imagenNoUser' alt='Avatar'>"
+                        + "<img src='img/no-user.png' id='imagenNoUser' alt='Avatar'>"
                         + "<div class='w3-display-bottomleft w3-container w3-text-black'>"
                             + "<h3>"+nombre+ apellido+"</h3>"
                              + "<h5>"+clave+"</h5>"
