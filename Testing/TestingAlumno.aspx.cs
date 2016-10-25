@@ -32,12 +32,12 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
         if (con != null)
         {
             //OdbcCommand cmd = new OdbcCommand("SELECT alumno.claveU,alumno.nombre FROM alumno ORDER BY alumno.claveU", con);
-            OdbcCommand cmd = new OdbcCommand("SELECT alumnos.claveU,alumnos.nombre FROM alumnos ORDER BY alumnos.claveU", con);
+            OdbcCommand cmd = new OdbcCommand("SELECT alumnos.claveU,alumnos.nombre,alumnos.apellido,alumnos.semestre,alumnos.carrera FROM alumnos ORDER BY alumnos.claveU", con);
             OdbcDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 if(!dr.IsDBNull(0))
-                    cards.InnerHtml = cards.InnerHtml + createCard(dr.GetInt32(0).ToString(), dr.GetString(1));
+                    cards.InnerHtml = cards.InnerHtml + createCard(dr.GetInt32(0).ToString(), dr.GetString(1), dr.GetString(2), dr.GetInt32(3).ToString(), dr.GetString(4));
                  //cards.InnerHtml = cards.InnerHtml + createCard(dr.GetString(0), dr.GetString(1));
             }
 

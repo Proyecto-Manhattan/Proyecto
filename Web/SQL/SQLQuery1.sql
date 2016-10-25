@@ -4,8 +4,11 @@ CREATE TABLE alumnos
 	 apellido varchar(100),
 	 correo varchar(50),
 	 edad smallint,
+	 semestre smallint,
+	 carrera varchar(100),
 	 preparatoria varchar(200),
 	 delegacion varchar(200),
+	 telefono bigint;
 	)
 
 CREATE TABLE alumnos_fotos
