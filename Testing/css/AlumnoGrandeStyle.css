@@ -1,0 +1,42 @@
+html,body,h1,h2,h3,h4,h5,h6,p {
+	font-family: "Roboto", sans-serif;
+}
+
+#contenedor {
+	max-width:1200px;
+}
+
+#contenedor2{
+	margin-top: 10px
+}
+
+.w3-row-padding{
+	margin:0 -16px;
+}
+
+#imagenNoUser{
+	width:100%;
+
+}
+
+#barra{
+	width:90%;
+}
+#barra2{
+	width:80%;
+}
+#barra3{
+	width:75%;
+}
+#barra4{
+	width:50%;
+}
+#barra5{
+	width:100%;
+}
+#barra6{
+	width:55%;
+}
+#barra7{
+	width:25%;
+}
