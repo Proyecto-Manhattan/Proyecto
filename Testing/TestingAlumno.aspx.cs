@@ -64,20 +64,20 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
         +   "<div class='w3-card-8 w3-dark-grey' style='width:100%'>"
         +       "<div class='w3-container w3-center'>"
         +           "<h3 class='w3-text-lime'>"
-                        + clave +
+                        + clave 
         +           "</h3>"
         +           "<img src='img/avatar_png.png' alt='Avatar' style='width:50%'/>"
         +           "<h5 id='nombre' runat='server' style='height:15px' class='w3-text-white'>"
-                        + nombre +
+                        + nombre 
         +           "</h5>"
         +           "<h5 id='apellido' runat='server' style='height:15px' class='w3-text-white'>"
-                        + apellido +
+                        + apellido 
         +           "</h5>"
         +           "<div id='semestre' class='w3-text-green'>"
-                        +   "Semestre :" + semestre +
+                        +   "Semestre :" + semestre 
         +           "</div>"
         +           "<div id='carrera' runat='server' style='height:15px' class='w3-text-amber'>"
-                        + carrera +
+                        + carrera 
         +           "</div>"
         +           "<div class='w3-section'>"
         +               "<button class='w3-btn w3-green'>"
