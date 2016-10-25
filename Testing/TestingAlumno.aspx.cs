@@ -59,33 +59,30 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
 
 
 
-          String card2 = ""
-        +"<section class='w3-col w3-container m3 l3 w3-teal'>"
+        String card2 = ""
+        +"<section class='w3-col w3-container m3 l3 w3-itam'>"
         +   "<div class='w3-card-8 w3-dark-grey' style='width:100%'>"
         +       "<div class='w3-container w3-center'>"
         +           "<h3 class='w3-text-lime'>"
                         + clave 
         +           "</h3>"
         +           "<img src='img/avatar_png.png' alt='Avatar' style='width:50%'/>"
-        +           "<h5 id='nombre' runat='server' style='height:15px' class='w3-text-white'>"
+        +           "<h5 id='nombre' runat='server' class='w3-text-white'>"
                         + nombre 
         +           "</h5>"
-        +           "<h5 id='apellido' runat='server' style='height:15px' class='w3-text-white'>"
+        +           "<h5 id='apellido' runat='server' class='w3-text-white'>"
                         + apellido 
         +           "</h5>"
         +           "<div id='semestre' class='w3-text-green'>"
                         +   "Semestre :" + semestre 
         +           "</div>"
-        +           "<div id='carrera' runat='server' style='height:15px' class='w3-text-amber'>"
+        +           "<div id='carrera' runat='server' class='w3-text-amber'>"
                         + carrera 
         +           "</div>"
-        +           "<div class='w3-section'>"
-        +               "<button class='w3-btn w3-green'>"
-                            +"Accept"
-        +               "</button>"
-        +               "<button class='w3-btn w3-red'>"
-                            +"Decline"
-        +               "</button>"
+        +           "<div class='w3-section' style='overflow:hidden;'>"
+        +               "<button class='w3-btn-block w3-green'>Accept</button>"
+        +               "<button class='w3-btn-block w3-red '>Decline</button>"
+        +               "<button class='w3-btn-block w3-blue '>2° Entrevista</button>"
         +           "</div>"
         +       "</div>"
         +   "</div>"
@@ -94,6 +91,6 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
         card.Replace('"', '$');
         card.Replace('\'', '"');
         card.Replace('$', '\'');
-        return card;
+        return card2;
     }
 }
