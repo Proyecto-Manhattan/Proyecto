@@ -10,7 +10,7 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
 {
     protected OdbcConnection conectarBD()
     {
-        String con = "Driver={SQL Server Native Client 11.0};Server=112SALAS11;Uid=sa;Pwd=sqladmin;Database=PruebaAlumno;";
+        String con = "Driver={SQL Server Native Client 11.0};Server=CC201-22;Uid=sa;Pwd=sqladmin;Database=pruebaAlumno;";
         try
         {
             OdbcConnection conexion = new OdbcConnection(con);
@@ -32,12 +32,12 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
         if (con != null)
         {
             //OdbcCommand cmd = new OdbcCommand("SELECT alumno.claveU,alumno.nombre FROM alumno ORDER BY alumno.claveU", con);
-            OdbcCommand cmd = new OdbcCommand("SELECT alumno.clave,alumno.F2 FROM alumno ORDER BY alumno.clave", con);
+            OdbcCommand cmd = new OdbcCommand("SELECT alumnos.claveU,alumnos.nombre FROM alumnos ORDER BY alumnos.claveU", con);
             OdbcDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 if(!dr.IsDBNull(0))
-                    cards.InnerHtml = cards.InnerHtml + createCard(dr.GetDouble(0).ToString(), dr.GetString(1));
+                    cards.InnerHtml = cards.InnerHtml + createCard(dr.GetInt32(0).ToString(), dr.GetString(1));
                  //cards.InnerHtml = cards.InnerHtml + createCard(dr.GetString(0), dr.GetString(1));
             }
 
