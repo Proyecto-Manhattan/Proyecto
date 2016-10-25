@@ -25,16 +25,16 @@
                   </ul>
 
         </header>
+        
     <div  class="w3-container">
-
-    <!--
-         =================
-        Inserción de alumnos
-         =================
-    -->
-    
         <div class="w3-row" id="cards" runat="server">
 
+                <!--
+                     =================
+                    Inserción de alumnos
+                     =================
+                -->
+    
         </div>
     </div>
 
