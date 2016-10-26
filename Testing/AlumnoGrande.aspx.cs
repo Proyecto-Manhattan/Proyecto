@@ -138,7 +138,7 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
                     + "<div class='w3-display-container'>"
                         + "<img src='img/no-user.png' id='imagenNoUser' alt='Avatar'>"
                         + "<div class='w3-display-bottomleft w3-container w3-text-black'>"
-                            + "<h3>"+nombre+ apellido+"</h3>"
+                            + "<h3>"+nombre+ "<br>" +apellido+"</h3>"
                              + "<h5>"+clave+"</h5>"
                               + "<p>"+Edad+"</p>"
                            + "</div>"
