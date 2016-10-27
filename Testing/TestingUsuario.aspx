@@ -9,6 +9,7 @@
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
+    <form id="form1" runat="server">
     <div class="w3-container">
   <h2>Card Example</h2>
 
@@ -17,6 +18,7 @@
     <div class="w3-container w3-center">
       <h3>Friend Request</h3>
       <img src="img/avatar_png.png" alt="Avatar" style="width:80%"/>
+        <asp:Button ID="Button1" runat="server" Text="Button" />
       <h5>John Doe</h5>
         <div class="w3-progress-container">
   <div id="myBar" class="w3-progressbar w3-green w3-round-xlarge" style="width:25%">
@@ -46,5 +48,6 @@
 
   </div>
 </div>
+    </form>
 </body>
 </html>
