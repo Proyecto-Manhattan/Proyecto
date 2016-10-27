@@ -1,16 +1,26 @@
+CREATE TABLE usuarios
+	(
+	 usuario varchar(50) NOT NULL,
+	 passwd varchar(50) NOT NULL
+	)
+
 CREATE TABLE alumnos
 	(claveU int PRIMARY KEY NOT NULL,
-	 nombre varchar(100),
-	 apellido varchar(100),
-	 correo varchar(50),
-	 edad smallint,
-	 preparatoria varchar(200),
-	 delegacion varchar(200),
+	 nombre varchar(100)NOT NULL,
+	 apellido varchar(100)NOT NULL,
+	 correo varchar(50) NOT NULL,
+	 edad smallint NOT NULL,
+	 semestre smallint NOT NULL,
+	 carrera varchar(100) NOT NULL,
+	 preparatoria varchar(200) NOT NULL,
+	 delegacion varchar(200) NOT NULL,
+	 telefono bigint NOT NULL
 	)
 
 CREATE TABLE alumnos_fotos
 	(claveU int references alumnos,
-	 foto varbinary(MAX) not null
+	 fotoBinary varbinary(MAX) not null,
+	 fotoImage image
 	)
 
 CREATE TABLE alumnos_extra
@@ -59,7 +69,29 @@ CREATE TABLE opcionesCb
 	 preguntaDecHabi varchar(250)
 	)
 
--------PREGUNTAS-------
+CREATE TABLE respSegundaEntrevista
+	(
+	 claveU int references alumnos,
+	 resp1 varchar(500),
+	 resp2 varchar(500),
+	 resp3 varchar(500),
+	 resp4 varchar(500),
+	 resp5 varchar(500),
+	 resp6 varchar(500),
+	 resp7 varchar(500),
+	 resp8 varchar(500),
+	 resp9 varchar(500)
+	)
+
+CREATE TABLE pregSegundaEntrevista
+	(
+	 numPreg int IDENTITY(1,1) PRIMARY KEY,
+	 preg1 varchar(250)
+	)
+
+
+
+--------------PREGUNTAS PRIMERA ENTREVISTA--------------
 INSERT INTO opcionesCb VALUES('Cercanía','Creo tener las habilidades para ser un buen administrador.','Pensamiento Analítico')
 INSERT INTO opcionesCb VALUES('Prestigio Académico','Por su plan de estudios integral','Pensamiento Crítico')
 INSERT INTO opcionesCb VALUES('Plan de estudios','Me interesa alguna área de concentración que ofrece el programa','Pensamiento Lógico')
@@ -82,3 +114,99 @@ INSERT INTO opcionesCb VALUES('','','Disciplinado')
 INSERT INTO opcionesCb VALUES('','','Puntual')
 INSERT INTO opcionesCb VALUES('','','Líder')
 INSERT INTO opcionesCb VALUES('','','Observador')
+
+--------------PREGUNTAS SEGUNDA ENTREVISTA--------------
+INSERT INTO pregSegundaEntrevista VALUES('¿Cómo se ha sentido en términos generales, en el ITAM? (le ha gustado o no), (se ha adaptado al ambiente del ITAM)')
+INSERT INTO pregSegundaEntrevista VALUES('¿Se ha dado de baja de alguna materia?¿Cuál o cuáles?')
+INSERT INTO pregSegundaEntrevista VALUES('¿Cómo le ha ido en sus exámenes?¿Le ha funcionado su metodología de estudio?')
+INSERT INTO pregSegundaEntrevista VALUES('¿Participa en alguna actividad extra-curricular?¿Cuál?')
+INSERT INTO pregSegundaEntrevista VALUES('¿Han cambiado sus expectativas con respecto al ITAM?')
+INSERT INTO pregSegundaEntrevista VALUES('¿Han cambiado sus expectativas con respecto al programa de Ingeniería en Computación?')
+INSERT INTO pregSegundaEntrevista VALUES('¿Cómo considera la metodología utilizada y el contenido de Algoritmos y Programas?¿Por qué?')
+INSERT INTO pregSegundaEntrevista VALUES('¿Qué sugeriría para mejorar la materia de Algoritmos y Programas?')
+INSERT INTO pregSegundaEntrevista VALUES('Comentarios Generales')
+
+
+--------------QUERIES GENERALES--------------
+
+
+-------SELECTS-------
+
+/*Datos*/
+SELECT alumnos.nombre FROM alumnos WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumnos.apellido FROM alumnos WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumnos.correo FROM alumnos WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumnos.edad FROM alumnos WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumnos.semestre FROM alumnos WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumnos.carrera FROM alumnos WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumnos.preparatoria FROM alumnos WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumnos.delegacion FROM alumnos WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumnos.telefono FROM alumnos WHERE claveU = '" + <PongaClaveUAqui> + "'
+
+/*Foto*/
+SELECT alumnos_fotos.fotoBinary FROM alumnos_fotos WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumnos_fotos.fotoImage FROM alumnos_fotos WHERE claveU = '" + <PongaClaveUAqui> + "'
+
+/*Datos Extras*/
+SELECT alumnos_extra.otraEscuela FROM alumnos_extra WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumnos_extra.trabajo FROM alumnos_extra WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumnos_extra.puesto FROM alumnos_extra WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumnos_extra.ayudaFinan FROM alumnos_extra WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumnos_extra.procedencia FROM alumnos_extra WHERE claveU = '" + <PongaClaveUAqui> + "'
+
+/*Prioridades Decision ITAM*/
+SELECT alumno_dec_itam.prioridad1 FROM alumno_dec_itam WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumno_dec_itam.prioridad2 FROM alumno_dec_itam WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumno_dec_itam.prioridad3 FROM alumno_dec_itam WHERE claveU = '" + <PongaClaveUAqui> + "'
+
+/*Prioridades Decision Programa*/
+SELECT alumno_dec_programa.prioridad1 FROM alumno_dec_programa WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumno_dec_programa.prioridad2 FROM alumno_dec_programa WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumno_dec_programa.prioridad3 FROM alumno_dec_programa WHERE claveU = '" + <PongaClaveUAqui> + "'
+
+/*Prioridades Decision Habilidades*/
+SELECT alumno_dec_habilidades.prioridad1 FROM alumno_dec_habilidades WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumno_dec_habilidades.prioridad2 FROM alumno_dec_habilidades WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumno_dec_habilidades.prioridad3 FROM alumno_dec_habilidades WHERE claveU = '" + <PongaClaveUAqui> + "'
+
+/*Preguntas*/
+SELECT alumno_preguntas.horasEstudio FROM alumno_preguntas WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumno_preguntas.actividadDeseo FROM alumno_preguntas WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumno_preguntas.hobby FROM alumno_preguntas WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumno_preguntas.felicidadItam FROM alumno_preguntas WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT alumno_preguntas.comentarios FROM alumno_preguntas WHERE claveU = '" + <PongaClaveUAqui> + "'
+
+/*Preguntas abiertas (2nda Entrevista)*/
+SELECT respSegundaEntrevista.resp1 FROM respSegundaEntrevista WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT respSegundaEntrevista.resp2 FROM respSegundaEntrevista WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT respSegundaEntrevista.resp3 FROM respSegundaEntrevista WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT respSegundaEntrevista.resp4 FROM respSegundaEntrevista WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT respSegundaEntrevista.resp5 FROM respSegundaEntrevista WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT respSegundaEntrevista.resp6 FROM respSegundaEntrevista WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT respSegundaEntrevista.resp7 FROM respSegundaEntrevista WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT respSegundaEntrevista.resp8 FROM respSegundaEntrevista WHERE claveU = '" + <PongaClaveUAqui> + "'
+SELECT respSegundaEntrevista.resp9 FROM respSegundaEntrevista WHERE claveU = '" + <PongaClaveUAqui> + "'
+
+/*LLENADO DE PREGUNTAS (decisiones) PARA COMBOBOX*/
+SELECT opcionesCb.preguntaDecItam FROM opcionesCb
+SELECT opcionesCb.preguntaDecProg FROM opcionesCb
+SELECT opcionesCb.preguntaDecHabi FROM opcionesCb
+
+/*LLENADO DE PREGUNTAS (2ndaEntrevista) PARA LLENADO FORMATOS*/
+SELECT pregSegundaEntrevista.preg1 FROM pregSegundaEntrevista WHERE numPreg = 1
+SELECT pregSegundaEntrevista.preg1 FROM pregSegundaEntrevista WHERE numPreg = 2
+SELECT pregSegundaEntrevista.preg1 FROM pregSegundaEntrevista WHERE numPreg = 3
+SELECT pregSegundaEntrevista.preg1 FROM pregSegundaEntrevista WHERE numPreg = 4
+SELECT pregSegundaEntrevista.preg1 FROM pregSegundaEntrevista WHERE numPreg = 5
+SELECT pregSegundaEntrevista.preg1 FROM pregSegundaEntrevista WHERE numPreg = 6
+SELECT pregSegundaEntrevista.preg1 FROM pregSegundaEntrevista WHERE numPreg = 7
+SELECT pregSegundaEntrevista.preg1 FROM pregSegundaEntrevista WHERE numPreg = 8
+SELECT pregSegundaEntrevista.preg1 FROM pregSegundaEntrevista WHERE numPreg = 9
+
+
+-------INSERT-------
+
+--alumnos--
+INSERT INTO alumnos(claveU,nombre,apellido,correo,edad,semestre,carrerra,preparatoria,delegacion,telefono) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')
+
+
