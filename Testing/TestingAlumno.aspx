@@ -9,33 +9,60 @@
     <title>Alumnos</title>
     <link href="css/styles.css" rel="stylesheet" />
 </head>
-<body>
-        <header class="w3-container">
-           <ul class="w3-navbar w3-light-green">
-    <li><a href="#" class="w3-padding-16 ">Home</a></li>
-    <li><a href="#" class="w3-padding-16 ">Link 1</a></li>
-    <li><a href="#" class="w3-padding-16 ">Link 2</a></li>
-    <li><a href="#" class="w3-padding-16 ">Link 3</a></li>
-    <li class="w3-navitem w3-right">
-      <input type="text" class="w3-input w3-border-0" placeholder="Search for claveUnicas.." id="myInput" onkeyup="myFunction()"/>
-    </li>
-    <li class="w3-navitem w3-right">
-      <input type="text" class="w3-input w3-border-0" placeholder="Search for names.." id="myInput2" onkeyup="myFunction2()"/>
-    </li>
-  </ul>
+<body class="w3-pale-green">
+        <header class="w3-container w3-itam w3-border w3-round-small">
+                    <div class="w3-itam w3-display-container">
+                        <img src="img/itam.png" class="w3-image" style="max-height:100px;" alt="ITAM" >
+                        <div class="w3-display-right w3-container w3-right">REGRESA</div>
+                    </div>
+                  <!--  <ul class="w3-navbar w3-light-green w3-collapse">
+                    <li><a href="#" class="w3-padding-16 ">Link 1</a></li>
+                    <li><a href="#" class="w3-padding-16 ">Link 2</a></li>
+                    <li><a href="#" class="w3-padding-16 ">Link 3</a></li>
+                    <li class="w3-navitem w3-right">
+                      <input type="text" class="w3-input w3-border-0 " placeholder="Search for semestre.." id="myInput3" onkeyup="searchSemestre()"/>
+                    </li>
+                    <li class="w3-navitem w3-right">
+                      <input type="text" class="w3-input w3-border-0 " placeholder="Search for claveUnicas.." id="myInput" onkeyup="searchClave()"/>
+                    </li>
+                    <li class="w3-navitem w3-right">
+                      <input type="text" class="w3-input w3-border-0 " placeholder="Search for names.." id="myInput2" onkeyup="searchNombre()"/>
+                    </li>
+                  </ul>-->
+                    <div class="w3-row-padding w3-section">
+                          <div class="w3-col m4 l4 w3-center ">
+                              <input type="text" class="w3-input w3-border-0 w3-border w3-border-black" placeholder="Search for semestre.." id="myInput3" onkeyup="searchSemestre()"/>
+                          </div>
+                          <div class="w3-col m4 l4 w3-center ">
+                              <input type="text" class="w3-input w3-border-0 w3-border w3-border-black" placeholder="Search for claveUnicas.." id="myInput" onkeyup="searchClave()"/>
+                          </div>
+                          <div class="w3-col m4 l4 w3-center ">
+                              <input type="text" class="w3-input w3-border-0 w3-border w3-border-black" placeholder="Search for names.." id="myInput2" onkeyup="searchNombre()"/>
+                          </div>
+                     </div>
+
         </header>
+        
     <div  class="w3-container">
         <div class="w3-row" id="cards" runat="server">
 
+                <!--
+                     =================
+                    Inserción de alumnos
+                     =================
+                -->
+    
         </div>
     </div>
 
     <script>
-        function myFunction() {
-            var input, filter, cards, section, h3, i, input2;
+        function searchClave() {
+            var input, filter, cards, section, h3, i, input2,input3;
             input = document.getElementById("myInput");
             input2 = document.getElementById("myInput2");
-            input2.value = "";
+            input3 = document.getElementById("myInput3");
+            input3.value = "";
+            input2.value = ""; 
             filter = input.value.toUpperCase();
             cards = document.getElementById("cards");
             section = cards.getElementsByTagName("section");
@@ -52,16 +79,41 @@
         }
 </script>
     <script>
-        function myFunction2() {
-            var input, filter, cards, section, h3, i,input2;
+        function searchNombre() {
+            var input, filter, cards, section, h3, i,input2,input3;
             input = document.getElementById("myInput2");
             input2 = document.getElementById("myInput");
+            input3 = document.getElementById("myInput3");
             input2.value = "";
+            input3.value = "";
             filter = input.value.toUpperCase();
             cards = document.getElementById("cards");
             section = cards.getElementsByTagName("section");
             for (i = 0; i < section.length; i++) {
                 h3 = section[i].getElementsByTagName("h5");
+                if (h3[0].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    section[i].style.display = "";
+                } else {
+                    section[i].style.display = "none";
+                }
+            }
+
+
+        }
+</script>
+ <script>
+        function searchSemestre() {
+            var input, filter, cards, section, h3, i,input2,input3;
+            input = document.getElementById("myInput3");
+            input2 = document.getElementById("myInput2");
+            input3 = document.getElementById("myInput");
+            input2.value = "";
+            input3.value = "";
+            filter = input.value.toUpperCase();
+            cards = document.getElementById("cards");
+            section = cards.getElementsByTagName("section");
+            for (i = 0; i < section.length; i++) {
+                h3 = section[i].getElementsByTagName("h4");
                 if (h3[0].innerHTML.toUpperCase().indexOf(filter) > -1) {
                     section[i].style.display = "";
                 } else {
