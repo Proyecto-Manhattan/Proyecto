@@ -85,9 +85,9 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
                                 String Universidad,
                                 String Preparatoria,
                                 String delegacion,
-                                String otraEscuela,
-                                String queEstudia,
-                                String dondeEstudia,
+                                String otraEscuela, //se tiene que eliminar
+                                String queEstudia, //Carrera
+                                String dondeEstudia, //se tiene que elminar se sobre entiende con la universidad
                                 String Trabaja,
                                 String dondeTrabaja,
                                 String puesto,
