@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Entevista 1</title>
+    <title>Entevista 2</title>
     <link href="css/styles.css" rel="stylesheet" />	
     <link href="css/EncuestaUno.css" rel="stylesheet" />
 
@@ -31,102 +31,41 @@
     <div id="forma">
   <form action="action_page.php">
     
-    <div class="img">
-        <a target="_blank" href="img_fjords.jpg">
-            <img class="media-object" src="img/no-user.png" alt="no-user">
-        </a>
-        <input type="file" name="file" id="file" class="inputfile" />
-        <label for="file">Choose a file</label>     
-    </div>
-          
-    <label for="claveUnica">Clave Unica</label>
-    <input type="number" id="ClaveUnica" name="claveUnica">
+    <!--## Sentimientos ##-->    
+    <label for="Sentimientos">¿Cómo se ha sentido en términos generales, en el ITAM?</label>
+    <textarea id="Sentimientos" name="sentimientos">Escribe el texto aquí</textarea>
     
-    <label for="Nombre">Nombre</label>
-    <input type="text" id="Nombre" name="nombre">
-    
-    <label for="Apellido">Apellido</label>
-    <input type="text" id="Apellido" name="apellido">
+    <!--## Baja ##-->
+    <label for="Baja">¿Se ha dado de baja de alguna materia? ¿Cúal o cúales?</label>
+    <textarea id="Baja" name="baja">Escribe el texto aquí</textarea>
 
-    <label for="Edad">Edad</label>
-    <input type="number" id="Edad" name="edad">
-    
-    <label for="Email">Email</label>
-    <input type="text" id="Email" name="email">
+    <!--## Examenes ##-->
+    <label for="Examenes">¿Cómo le ha ido en sus exámenes? ¿Le ha funcionado su metodología de estudio?</label>
+    <textarea id="Examenes" name="examenes">Escribe el texto aquí</textarea>
 
-    <label for="Telefono">Teléfono</label>
-    <input type="number" id="Telefono" name="telefono">
-
-     <!--Se podria poner mas paises-->
-    <label for="Pais">País</label>
-    <select id="Pais" name="pais">
-      <option value="Mexico">México</option>
-      <option value="Otro">otro</option>      
-    </select>
-
-    <label for="Estado">Estado</label>
-    <select id="Estado" name="estado">
-      <option value="Ciudad de Mexico">Ciudad de México</option>
-      <option value="Otro">otro</option>      
-    </select>
-
-    <label for="Delegacion">Delegación</label>
-    <select id="Delegacion" name="delegacion">
-      <option value="Alvaro Obregon">Alvaro Obregon</option>
-      <option value="Otro">otro</option>      
-    </select>
-
-    <!--No ha sido considerado-->
-    <label for="Celular">Celular</label>
-    <input type="number" id="Celular" name="celular">
-
-    <!--Se podria poner javaScript para dar a elegir las opciones-->
-    <!--la universidad se sobre entiende como la otra escuela-->
-    <label for="Universidad">Universidad</label>
-    <input type="text" id="Universidad" name="universidad">
-     
-     <!--Se entiende como queEstudia-->  
-    <label for="Carrera">Carrera</label>
-    <input type="text" id="Carrera" name="carrera">
-
-    <label for="Preparatoria">Preparatoria</label>
-    <input type="text" id="Preparatoria" name="preparatoria">
-
-    <!--## Trabajo ##-->
-    <!--Se podria poner javaScript para dar a elegir las opciones-->
-    <label for="Trabajo">Trabajo</label>
-    <input type="text" id="Trabajo" name="trabajo">
-
-    <label for="LugarTrabajo">Lugar donde trabajas</label>
-    <input type="text" id="LugarTrabajo" name="lugarTrabajo">
-
-    <label for="Puesto">Puesto</label>
-    <input type="text" id="Puesto" name="puesto">
-
-    <!--## Ayuda Financiera ##-->
-    <!--Se podria poner javaScript para dar a elegir las opciones-->
-    <label for="AyudaFinanciera">Ayuda Financiera</label>
-    <input type="text" id="AyudaFinanciera" name="ayudaFinanciera">
-
-    <label for="PorcentajeBeca">Porcentaje de la beca</label>
-    <input type="text" id="PorcentajeBeca" name="porcentajeBeca">
-
-    <label for="PorcentajeAyudaFinanciera">Porcentaje de la ayuda financiera</label>
-    <input type="text" id="PorcentajeAyudaFinanciera" name="porcentajeAyudaFinanciera">
-    
-    <!--## Actividades Extracurriculares ##-->
-    <!--Se podria poner javaScript para dar a elegir las opciones-->
-    <label for="Actividad">¿En qué tipo de actividad deportiva, cultural, académica te gustaría participar?</label>
+    <!--## Actividad ##-->
+    <label for="Actividad">¿Participa en alguna actividad extra-curricular? ¿Cuál?</label>
     <textarea id="Actividad" name="actividad">Escribe el texto aquí</textarea>
 
-    <label for="Hobby">¿tienes algún hobby, pasatiempo o realizas alguna actividad extracurriculaeres?</label>
-    <textarea id="Hobby" name="hobby">Escribe el texto aquí</textarea>
+    <!--## Expectativas ##-->
+    <label for="Expectativas">¿Han cambiado sus expectativas con respecto al ITAM?</label>
+    <textarea id="Expectativas" name="expectativas">Escribe el texto aquí</textarea>
 
-    <label for="Felicidad">Serías más feliz en el ITAM si</label>
-    <textarea id="Felicidad" name="felicidad">Escribe el texto aquí</textarea>
+    <!--## ExpectativasPrograma ##-->
+    <label for="ExpectativasPrograma">¿Han cambiado sus expectativas con respecto al programa de Ingeniería en Computacion?</label>
+    <textarea id="ExpectativasPrograma" name="expectativasPrograma">Escribe el texto aquí</textarea>
 
-    <label for="Recomendaciones">Recomendaciones o comentarios en general que quisiera hacernos</label>
-    <textarea id="Recomendaciones" name="recomendaciones">Escribe el texto aquí</textarea>
+    <!--## AlgoritmosProgramas ##-->
+    <label for="AlgoritmosProgramas">¿Cómo consideras la metodología utilizada y el contenido de Algoritmos y Programas de Ingeniería en Computación?</label>
+    <textarea id="AlgoritmosProgramas" name="algoritmosProgramas">Escribe el texto aquí</textarea>
+
+    <!--## MejoraAlgoritmosProgramas ##-->
+    <label for="MejoraAlgoritmosProgramas">¿Qué sugerirías para mejorar la materia de Algoritmos y Programas?</label>
+    <textarea id="MejoraAlgoritmosProgramas" name="mejoraAlgoritmosProgramas">Escribe el texto aquí</textarea>
+
+    <!--## Comentarios ##-->
+    <label for="Comentarios">¿Comentarios Generales?</label>
+    <textarea id="Comentarios" name="comentarios">Escribe el texto aquí</textarea>
   
     <input type="submit" value="Submit">
   </form>
