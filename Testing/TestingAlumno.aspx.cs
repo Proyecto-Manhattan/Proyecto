@@ -62,7 +62,7 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
 
 
         String card2 = ""
-        +"<section class='w3-col w3-container m3 l3 w3-itam  w3-border w3-round-xlarge w3-card-24'><form action='Entrevista1.aspx' method='POST' runat='server'>"
+        +"<section class='w3-col w3-container m3 l3 w3-itam  w3-border w3-round-xlarge w3-card-24'><form action='AlumnoGrande.aspx' method='POST' runat='server'>"
         +   "<div class='w3-card-8 w3-dark-grey' style='width:100%'>"
         +       "<div class='w3-container w3-center'>"
         +           "<h3 class='w3-text-lime'>"

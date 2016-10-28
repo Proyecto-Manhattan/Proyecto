@@ -14,20 +14,12 @@
     
 </head>
 <body class"w3-light-grey">
-    <header class="w3-container">
-        <ul class="w3-navbar w3-light-green">
-            <li><a href="#" class="w3-padding-16 ">Home</a></li>
-            <li><a href="#" class="w3-padding-16 ">Link 1</a></li>
-            <li><a href="#" class="w3-padding-16 ">Link 2</a></li>
-            <li><a href="#" class="w3-padding-16 ">Link 3</a></li>
-            <li class="w3-navitem w3-right">
-                <input type="text" class="w3-input w3-border-0" placeholder="Search for claveUnicas.." id="myInput" onkeyup="myFunction()"/>
-            </li>
-            <li class="w3-navitem w3-right">
-                <input type="text" class="w3-input w3-border-0" placeholder="Search for names.." id="myInput2" onkeyup="myFunction2()"/>
-            </li>
-        </ul>
-    </header>           
+    <header class="w3-container w3-itam w3-border w3-round-small">
+        <div class="w3-itam w3-display-container">
+            <img src="img/itam.png" class="w3-image" style="max-height: 100px;" alt="ITAM">
+            <div class="w3-display-right w3-container w3-right"><a href="TestingAlumno.aspx" id="home" runat="server">REGRESA</a></div>
+        </div>
+    </header> 
     <!-- Page Container -->
     <div class='w3-container w3-content w3-margin-top' id='contenedor'>
         <!-- The Grid -->

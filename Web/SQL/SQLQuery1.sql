@@ -215,6 +215,12 @@ SELECT pregSegundaEntrevista.preg1 FROM pregSegundaEntrevista WHERE numPreg = 9
 -------INSERT-------
 
 --alumnos--
-INSERT INTO alumnos(claveU,nombre,apellido,correo,edad,semestre,carrerra,preparatoria,delegacion,telefono) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')
+INSERT INTO alumnos(claveU,nombre,apellido,edad,correo,telefono,celular,carrera,estado,pais) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}');
+INSERT INTO alumnos_datos(claveU,universidad,preparatoria,delegacion) VALUES('{0}','{1}','{2}','{3}');
+INSERT INTO alumnos_institucion(claveU,estudiaOtra,otraEscuela,queEstudia,trabajo,lugarTrabajo,puesto,ayudaFinan,porcentajeBeca,porcentajeFinanciera) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}');
+INSERT INTO alumno_dec_itam(claveU,prioridad1,prioridad2,prioridad3) VALUES('{0}','{1}','{2}','{3}');
+INSERT INTO alumno_dec_programa(claveU,prioridad1,prioridad2,prioridad3) VALUES('{0}','{1}','{2}','{3}');
+INSERT INTO alumno_dec_habilidades(claveU,prioridad1,prioridad2,prioridad3) VALUES('{0}','{1}','{2}','{3}');
+INSERT INTO alumno_preguntas(claveU,actividadDeseo,hobby,felicidadItam,comentarios) VALUES('{0}','{1}','{2}','{3}');
 
 

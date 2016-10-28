@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 
 public partial class Testing_AlumnoGrande : System.Web.UI.Page
 {
+    int claveU;
     protected OdbcConnection conectarBD()
     {
         String con = "Driver={SQL Server Native Client 11.0};Server=CC201-22;Uid=sa;Pwd=sqladmin;Database=pruebaAlumno;";
@@ -26,6 +27,16 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
     }
     protected void Page_Load(object sender, EventArgs e)
     {
+        String clave = Request.Form.Get("claveUnica");
+        if (clave != null)
+        {
+            claveU = int.Parse(clave);
+        }
+        else
+        {
+            claveU = -1;
+            Response.Redirect("TestingAlumno.aspx");
+        }
         OdbcConnection con = conectarBD();
 
         if (con != null)

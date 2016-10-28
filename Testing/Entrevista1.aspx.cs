@@ -64,6 +64,15 @@ public partial class Testing_Entrevista1 : System.Web.UI.Page
             String texto_ayudaFinanciera = AyudaFinanciera.Value.ToString();
             String texto_porcentajeBeca = PorcentajeBeca.Value.ToString();
             String texto_porcentajeAyudadFinanciera = PorcentajeAyudaFinanciera.Value.ToString();
+            String op1_itam = Select1.Value.ToString();
+            String op2_itam = Select2.Value.ToString();
+            String op3_itam = Select3.Value.ToString();
+            String op1_programa = Select4.Value.ToString();
+            String op2_programa = Select5.Value.ToString();
+            String op3_programa = Select6.Value.ToString();
+            String op1_hablidad = Select7.Value.ToString();
+            String op2_hablidad = Select8.Value.ToString();
+            String op3_hablidad = Select9.Value.ToString();
             String texto_actividad = Actividad.Value.ToString();
             String texto_hobby = Hobby.Value.ToString();
             String texto_felicidad = Felicidad.Value.ToString();
