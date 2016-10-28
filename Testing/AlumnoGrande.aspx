@@ -28,20 +28,40 @@
     <div class='w3-container w3-content w3-margin-top' id='contenedor'>
         <!-- The Grid -->
         <div class='w3-row-padding'>
-            <div class="w3-row" id="columnaIzq" runat="server">
-                <!--
-                 =================
-                 Inserción de columnaIzq alumnos grande
-                 =================
-                -->
-            </div>
-            <div class="w3-row" id="columnaDer" runat="server">
-                <!--
-                 =================
-                 Inserción de columnaDer alumnos grande
-                 =================
-                -->
-            </div>            
+            <div class="w3-row" id="Div1" runat="server">
+                <div id="columnaIzq" runat="server">
+                    <!--
+                     =================
+                     Inserción de columnaIzq alumnos grande
+                     =================
+                    -->
+                </div>
+                <!-- Right Column -->
+                <div class='w3-twothird'>
+                    <div id="tarjetaUno" runat="server">                   
+                    <!--
+                     =================
+                     Inserción de Tarjeta1 a alumnos grande
+                     =================
+                    -->
+                    </div>
+                    <div id="tarjetaDos" runat="server">                   
+                    <!--
+                     =================
+                     Inserción de Tarjeta2 a alumnos grande
+                     =================
+                    -->
+                    </div>
+                    <div id="tarjetaTres" runat="server">                   
+                    <!--
+                     =================
+                     Inserción de Tarjeta3 a alumnos grande
+                     =================
+                    -->
+                    </div>
+
+                </div> 
+             </div>           
         <!-- End Grid -->         
         </div>   
     <!-- End Page Container -->     
