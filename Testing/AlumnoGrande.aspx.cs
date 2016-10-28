@@ -11,7 +11,7 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
     int claveU;
     protected OdbcConnection conectarBD()
     {
-        String con = "Driver={SQL Server Native Client 11.0};Server=CC201-22;Uid=sa;Pwd=sqladmin;Database=pruebaAlumno;";
+        String con = "Driver={SQL Server Native Client 11.0};Server=112SALAS13;Uid=sa;Pwd=sqladmin;Database=pruebaAlumno;";
         try
         {
             OdbcConnection conexion = new OdbcConnection(con);
@@ -31,6 +31,7 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
         if (clave != null)
         {
             claveU = int.Parse(clave);
+            
         }
         else
         {
@@ -42,28 +43,126 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
         if (con != null)
         {
             //OdbcCommand cmd = new OdbcCommand("SELECT alumno.claveU,alumno.nombre FROM alumno ORDER BY alumno.claveU", con);
-            OdbcCommand cmd = new OdbcCommand("SELECT alumnos.claveU,alumnos.nombre,alumnos.apellido,alumnos.semestre,alumnos.carrera FROM alumnos ORDER BY alumnos.claveU", con);
+            OdbcCommand cmd = new OdbcCommand("SELECT * FROM alumnos WHERE alumnos.claveU ='"+claveU+"';", con);
             OdbcDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 if (!dr.IsDBNull(0))
                 {
                     columnaIzq.InnerHtml = columnaIzq.InnerHtml + CreateAlumno(
-                                                                     dr.GetString(0),
                                                                      dr.GetString(1),
                                                                      dr.GetString(2),
-                                                                     dr.GetString(3),
-                                                                     dr.GetString(4),
-                                                                     dr.GetString(5),
-                                                                     dr.GetString(6),
+                                                                     dr.GetInt32(0).ToString(),
+                                                                     dr.GetInt32(3).ToString(),
                                                                      dr.GetString(7),
-                                                                     dr.GetString(8));
+                                                                     dr.GetString(8),
+                                                                     dr.GetString(9),
+                                                                     dr.GetString(4),
+                                                                     dr.GetInt64(5).ToString());
+                    
+                    //tarjetaDos.InnerHtml = tarjetaDos.InnerHtml + Tarjeta2(
+                    //                                                  dr.GetString(0),
+                    //                                                  dr.GetString(1),
+                    //                                                  dr.GetString(2),
+                    //                                                  dr.GetString(3),
+                    //                                                  dr.GetString(4),
+                    //                                                  dr.GetString(5),
+                    //                                                  dr.GetString(6),
+                    //                                                  dr.GetString(7),
+                    //                                                  dr.GetString(8));
+                    //tarjetaTres.InnerHtml = tarjetaTres.InnerHtml + Tarjeta3(
+                    //                                                  dr.GetString(0),
+                    //                                                  dr.GetString(1),
+                    //                                                  dr.GetString(2),
+                    //                                                  dr.GetString(3));
+                    //tarjetaCuatro.InnerHtml = tarjetaCuatro.InnerHtml + Tarjeta4(
+                    //                                                 dr.GetString(0),
+                    //                                                 dr.GetString(1),
+                    //                                                 dr.GetString(2),
+                    //                                                 dr.GetString(3),
+                    //                                                 dr.GetString(4),
+                    //                                                 dr.GetString(5),
+                    //                                                 dr.GetString(6),
+                    //                                                 dr.GetString(7),
+                    //                                                 dr.GetString(8),
+                    //                                                 dr.GetString(9));
+
+                    //cards.InnerHtml = cards.InnerHtml + createCard(dr.GetString(0), dr.GetString(1));
+                }                
+            }
+            dr.Close();
+        }
+        else
+        {
+            columnaIzq.InnerHtml = columnaIzq.InnerHtml + CreateAlumno("","","","","", "", "", "", "");
+            tarjetaDos.InnerHtml = tarjetaDos.InnerHtml + Tarjeta2("", "", "", "", "", "", "", "", "");
+            tarjetaTres.InnerHtml = tarjetaTres.InnerHtml + Tarjeta3("", "", "", "");
+            tarjetaTresCinco.InnerHtml = tarjetaTresCinco.InnerHtml + Tarjeta35("", "", "", "", "", "", "", "", "");
+            tarjetaCuatro.InnerHtml = tarjetaCuatro.InnerHtml + Tarjeta4("", "", "", "", "", "", "", "", "", "");
+        }
+        if (con != null)
+        {
+            OdbcCommand cmd = new OdbcCommand("SELECT * FROM alumnos_datos WHERE alumnos_datos.claveU ='" + claveU + "';", con);
+            OdbcDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                if (!dr.IsDBNull(0))
+                {
+
                     tarjetaUno.InnerHtml = tarjetaUno.InnerHtml + Tarjeta1(
-                                                                      dr.GetString(0),
                                                                       dr.GetString(1),
-                                                                      dr.GetString(2));
+                                                                      dr.GetString(2),
+                                                                      dr.GetString(3));
+                    //tarjetaDos.InnerHtml = tarjetaDos.InnerHtml + Tarjeta2(
+                    //                                                  dr.GetString(0),
+                    //                                                  dr.GetString(1),
+                    //                                                  dr.GetString(2),
+                    //                                                  dr.GetString(3),
+                    //                                                  dr.GetString(4),
+                    //                                                  dr.GetString(5),
+                    //                                                  dr.GetString(6),
+                    //                                                  dr.GetString(7),
+                    //                                                  dr.GetString(8));
+                    //tarjetaTres.InnerHtml = tarjetaTres.InnerHtml + Tarjeta3(
+                    //                                                  dr.GetString(0),
+                    //                                                  dr.GetString(1),
+                    //                                                  dr.GetString(2),
+                    //                                                  dr.GetString(3));
+                    //tarjetaCuatro.InnerHtml = tarjetaCuatro.InnerHtml + Tarjeta4(
+                    //                                                 dr.GetString(0),
+                    //                                                 dr.GetString(1),
+                    //                                                 dr.GetString(2),
+                    //                                                 dr.GetString(3),
+                    //                                                 dr.GetString(4),
+                    //                                                 dr.GetString(5),
+                    //                                                 dr.GetString(6),
+                    //                                                 dr.GetString(7),
+                    //                                                 dr.GetString(8),
+                    //                                                 dr.GetString(9));
+
+                    //cards.InnerHtml = cards.InnerHtml + createCard(dr.GetString(0), dr.GetString(1));
+                }
+            }
+            dr.Close();
+        }
+        else
+        {
+            columnaIzq.InnerHtml = columnaIzq.InnerHtml + CreateAlumno("", "", "", "", "", "", "", "", "");
+            tarjetaUno.InnerHtml = tarjetaUno.InnerHtml + Tarjeta1("", "", "");
+            tarjetaDos.InnerHtml = tarjetaDos.InnerHtml + Tarjeta2("", "", "", "", "", "", "", "", "");
+            tarjetaTres.InnerHtml = tarjetaTres.InnerHtml + Tarjeta3("", "", "", "");
+            tarjetaTresCinco.InnerHtml = tarjetaTresCinco.InnerHtml + Tarjeta35("", "", "", "", "", "", "", "", "");
+            tarjetaCuatro.InnerHtml = tarjetaCuatro.InnerHtml + Tarjeta4("", "", "", "", "", "", "", "", "", "");
+        }
+        if (con != null)
+        {
+            OdbcCommand cmd = new OdbcCommand("SELECT * FROM alumnos_institucion WHERE alumnos_institucion.claveU ='" + claveU + "';", con);
+            OdbcDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                if (!dr.IsDBNull(0))
+                {
                     tarjetaDos.InnerHtml = tarjetaDos.InnerHtml + Tarjeta2(
-                                                                      dr.GetString(0),
                                                                       dr.GetString(1),
                                                                       dr.GetString(2),
                                                                       dr.GetString(3),
@@ -71,12 +170,123 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
                                                                       dr.GetString(5),
                                                                       dr.GetString(6),
                                                                       dr.GetString(7),
+                                                                      dr.GetString(9),
                                                                       dr.GetString(8));
+                    //tarjetaTres.InnerHtml = tarjetaTres.InnerHtml + Tarjeta3(
+                    //                                                  dr.GetString(0),
+                    //                                                  dr.GetString(1),
+                    //                                                  dr.GetString(2),
+                    //                                                  dr.GetString(3));
+                    //tarjetaCuatro.InnerHtml = tarjetaCuatro.InnerHtml + Tarjeta4(
+                    //                                                 dr.GetString(0),
+                    //                                                 dr.GetString(1),
+                    //                                                 dr.GetString(2),
+                    //                                                 dr.GetString(3),
+                    //                                                 dr.GetString(4),
+                    //                                                 dr.GetString(5),
+                    //                                                 dr.GetString(6),
+                    //                                                 dr.GetString(7),
+                    //                                                 dr.GetString(8),
+                    //                                                 dr.GetString(9));
+
+                    //cards.InnerHtml = cards.InnerHtml + createCard(dr.GetString(0), dr.GetString(1));
+                }
+            }
+            dr.Close();
+        }
+        else
+        {
+            columnaIzq.InnerHtml = columnaIzq.InnerHtml + CreateAlumno("", "", "", "", "", "", "", "", "");
+            tarjetaUno.InnerHtml = tarjetaUno.InnerHtml + Tarjeta1("", "", "");
+            tarjetaDos.InnerHtml = tarjetaDos.InnerHtml + Tarjeta2("", "", "", "", "", "", "", "", "");
+            tarjetaTres.InnerHtml = tarjetaTres.InnerHtml + Tarjeta3("", "", "", "");
+            tarjetaTresCinco.InnerHtml = tarjetaTresCinco.InnerHtml + Tarjeta35("", "", "", "", "", "", "", "", "");
+            tarjetaCuatro.InnerHtml = tarjetaCuatro.InnerHtml + Tarjeta4("", "", "", "", "", "", "", "", "", "");
+        }
+        if (con != null)
+        {
+            OdbcCommand cmd = new OdbcCommand("SELECT * FROM alumno_preguntas WHERE alumno_preguntas.claveU ='" + claveU + "';", con);
+            OdbcDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                if (!dr.IsDBNull(0))
+                {
+
                     tarjetaTres.InnerHtml = tarjetaTres.InnerHtml + Tarjeta3(
-                                                                      dr.GetString(0),
                                                                       dr.GetString(1),
                                                                       dr.GetString(2),
-                                                                      dr.GetString(3));
+                                                                      dr.GetString(3),
+                                                                      dr.GetString(4));
+                    //tarjetaCuatro.InnerHtml = tarjetaCuatro.InnerHtml + Tarjeta4(
+                    //                                                 dr.GetString(0),
+                    //                                                 dr.GetString(1),
+                    //                                                 dr.GetString(2),
+                    //                                                 dr.GetString(3),
+                    //                                                 dr.GetString(4),
+                    //                                                 dr.GetString(5),
+                    //                                                 dr.GetString(6),
+                    //                                                 dr.GetString(7),
+                    //                                                 dr.GetString(8),
+                    //                                                 dr.GetString(9));
+
+                    //cards.InnerHtml = cards.InnerHtml + createCard(dr.GetString(0), dr.GetString(1));
+                }
+            }
+            dr.Close();
+        }
+        else
+        {
+            columnaIzq.InnerHtml = columnaIzq.InnerHtml + CreateAlumno("", "", "", "", "", "", "", "", "");
+            tarjetaUno.InnerHtml = tarjetaUno.InnerHtml + Tarjeta1("", "", "");
+            tarjetaDos.InnerHtml = tarjetaDos.InnerHtml + Tarjeta2("", "", "", "", "", "", "", "", "");
+            tarjetaTres.InnerHtml = tarjetaTres.InnerHtml + Tarjeta3("", "", "", "");
+            tarjetaTresCinco.InnerHtml = tarjetaTresCinco.InnerHtml + Tarjeta35("", "", "", "", "", "", "", "", "");
+            tarjetaCuatro.InnerHtml = tarjetaCuatro.InnerHtml + Tarjeta4("", "", "", "", "", "", "", "", "", "");
+        }
+        if (con != null)
+        {
+            String query = "SELECT alumno_dec_itam.prioridad1,alumno_dec_itam.prioridad2,alumno_dec_itam.prioridad3,alumno_dec_programa.prioridad1,alumno_dec_programa.prioridad2,alumno_dec_programa.prioridad3,alumno_dec_habilidades.prioridad1,alumno_dec_habilidades.prioridad2,alumno_dec_habilidades.prioridad3 FROM alumno_dec_itam INNER JOIN alumno_dec_programa ON alumno_dec_programa.claveU = alumno_dec_itam.claveU INNER JOIN alumno_dec_habilidades ON alumno_dec_programa.claveU = alumno_dec_habilidades.claveU   WHERE alumno_dec_itam.claveU =" + claveU + ";";
+            OdbcCommand cmd = new OdbcCommand(query, con);
+            OdbcDataReader dr = cmd.ExecuteReader();
+            
+            while (dr.Read())
+            {
+                if (!dr.IsDBNull(0))
+                {
+
+                    tarjetaTresCinco.InnerHtml = tarjetaTresCinco.InnerHtml + Tarjeta35(
+                                                                                 dr.GetString(0),
+                                                                                 dr.GetString(1),
+                                                                                 dr.GetString(2),
+                                                                                 dr.GetString(3),
+                                                                                 dr.GetString(4),
+                                                                                 dr.GetString(5),
+                                                                                 dr.GetString(6),
+                                                                                 dr.GetString(7),
+                                                                                 dr.GetString(8));
+
+
+                }
+                else
+                {
+                    tarjetaTresCinco.InnerHtml = tarjetaTresCinco.InnerHtml + Tarjeta35("", "", "", "", "", "", "", "", "");
+                }
+            }
+            dr.Close();
+        }
+        else
+        {
+            tarjetaCuatro.InnerHtml = tarjetaCuatro.InnerHtml + Tarjeta4("", "", "", "", "", "", "", "", "", "");
+        }
+        if (con != null)
+        {
+            OdbcCommand cmd = new OdbcCommand("SELECT * FROM alumno_preguntas WHERE alumno_preguntas.claveU ='" + claveU + "';", con);
+            OdbcDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                if (dr.IsDBNull(0))
+                {
+
                     tarjetaCuatro.InnerHtml = tarjetaCuatro.InnerHtml + Tarjeta4(
                                                                      dr.GetString(0),
                                                                      dr.GetString(1),
@@ -89,33 +299,32 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
                                                                      dr.GetString(8),
                                                                      dr.GetString(9));
 
-                    //cards.InnerHtml = cards.InnerHtml + createCard(dr.GetString(0), dr.GetString(1));
-                }                
+
+                }
+                else 
+                {
+                    tarjetaCuatro.InnerHtml = tarjetaCuatro.InnerHtml + Tarjeta4("", " ", "", "", "", "", "", "", "", "");
+                }
             }
             dr.Close();
         }
         else
         {
-            columnaIzq.InnerHtml = columnaIzq.InnerHtml + CreateAlumno("","","","","", "", "", "", "");
-            tarjetaUno.InnerHtml = tarjetaUno.InnerHtml + Tarjeta1("", "", "");
-            tarjetaDos.InnerHtml = tarjetaDos.InnerHtml + Tarjeta2("", "", "", "", "", "", "", "", "");
-            tarjetaTres.InnerHtml = tarjetaTres.InnerHtml + Tarjeta3("", "", "", "");
-            tarjetaTresCinco.InnerHtml = tarjetaTresCinco.InnerHtml + Tarjeta35("", "", "", "", "", "", "", "", "");
-            tarjetaCuatro.InnerHtml = tarjetaCuatro.InnerHtml + Tarjeta4("", "", "", "", "", "", "", "", "", "");
+            //tarjetaCuatro.InnerHtml = tarjetaCuatro.InnerHtml + Tarjeta4("", "", "", "", "", "", "", "", "", "");
         }
     }
 
     private String CreateAlumno( String nombre, String apellido, String clave, String Edad, String programa, String Estado, String Pais, String Email,String Tel)
     {
-        nombre = "nombre";
-        apellido = "apellido";
-        clave = "clave";
-        Edad = "Edad";
-        programa = "programa";
-        Estado = "Estado";
-        Pais = "Pais";
-        Email = "Email";
-        Tel = "Tel";
+        //nombre = "nombre";
+        //apellido = "apellido";
+        //clave = "clave";
+        //Edad = "Edad";
+        //programa = "programa";
+        //Estado = "Estado";
+        //Pais = "Pais";
+        //Email = "Email";
+        //Tel = "Tel";
 
         String columnaIzq =
              "<!--Left Column--> "
@@ -123,11 +332,11 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
              + "<div class='w3-white w3-text-grey w3-card-4'>"                   //2
 
                  + "<div class='w3-display-container'>"                          //3
-                     + "<img src='img/no-user.png' id='imagenNoUser' alt='Avatar'>"
+                     + "<img src='img/avatar_png.png' class='w3-opacity' id='imagenNoUser' alt='Avatar'>"
                      + "<div class='w3-display-bottomleft w3-container w3-text-black'>"  //4
                          + "<h3>" + nombre + "<br>" + apellido + "</h3>"
-                         + "<h5>" + clave + "</h5>"
-                         + "<p>" + Edad + "</p>"
+                         + "<h5> CU: " + clave + "</h5>"
+                         + "<p> Edad: " + Edad + "</p>"
                      + "</div>"                                                          //-4
                  + "</div>"                                                      //-3
 
@@ -197,9 +406,9 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
     }
         private String Tarjeta1(String Universidad, String Preparatoria, String delegacion)
     { 
-        Universidad = "Universidad";
-        Preparatoria = "Preparatoria";
-        delegacion = "delegacion";     
+        //Universidad = "Universidad";
+        //Preparatoria = "Preparatoria";
+        //delegacion = "delegacion";     
 
         String tarjetaUno =              
                 "<div class='w3-container w3-card-2 w3-white w3-margin-bottom'>" //2
@@ -231,17 +440,17 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
         private String Tarjeta2(String otraEscuela, String queEstudia, String dondeEstudia,
                             String Trabaja, String dondeTrabaja, String puesto, String ayudaFinanciera, String becaPorcetanje, String ayudaPorcentaje)
     {
-        Trabaja = "Trabaja";
-        dondeTrabaja = "dondeTrabaja";
-        puesto = "puesto";
+        //Trabaja = "Trabaja";
+        //dondeTrabaja = "dondeTrabaja";
+        //puesto = "puesto";
 
-        otraEscuela = "otraEscuela";
-        queEstudia = "queEstudia";
-        dondeEstudia = "dondeEstudia";
+        //otraEscuela = "otraEscuela";
+        //queEstudia = "queEstudia";
+        //dondeEstudia = "dondeEstudia";
         
-        ayudaFinanciera = "ayudaFinanciera";
-        becaPorcetanje = "becaPorcetanje";
-        ayudaPorcentaje = "ayudaPorcentaje";
+        //ayudaFinanciera = "ayudaFinanciera";
+        //becaPorcetanje = "becaPorcetanje";
+        //ayudaPorcentaje = "ayudaPorcentaje";
 
         String tarjetaDos =
                    "<div class='w3-container w3-card-2 w3-white w3-margin-bottom'>"  //2
@@ -260,7 +469,7 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
                        + "</div>"                              //-4
                        + "<div class='w3-container'>"          //-5
                            + "<h5 class='w3-opacity'>" + "<b>" + "Ayuda financiera: " + ayudaFinanciera + "</b>" + "</h5>"
-                           + "<p>" + ayudaPorcentaje + "</p>"
+                           + "<p> Beca: " + ayudaPorcentaje +"%, Ayuda Financiera: "+becaPorcetanje+ "%</p>"
                            + "<br>"
                        + "</div>"                              //-5
                    + "</div>";                //-2                  
@@ -273,10 +482,10 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
 
     private String Tarjeta3(String actividades, String HobOactivExtra, String felicidad, String comentarios)
     {
-        actividades = "actividades";
-        HobOactivExtra = "HobOactivExtra";
-        felicidad = "felicidad";
-        comentarios = "comentarios";
+        //actividades = "actividades";
+        //HobOactivExtra = "HobOactivExtra";
+        //felicidad = "felicidad";
+        //comentarios = "comentarios";
         String tarjetaTres =
                    "<div class='w3-container w3-card-2 w3-white w3-margin-bottom'>"               //2
                     + "<h2 class='w3-text-grey w3-padding-16'>" + "<i class='fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal'>" + "</i>" + "Intereses" + "</h2>"
@@ -311,15 +520,15 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
                              String decisionPrograma, String decisionPrograma2, String decisionPrograma3,
                              String Habilidades, String Habilidades2, String Habilidades3)
     {
-        decisionEstudio = "decisionEstudio";
-        decisionEstudio2 = "decisionEstudio2";
-        decisionEstudio3 = "decisionEstudio3";
-        decisionPrograma = "decisionPrograma";
-        decisionPrograma2 = "decisionPrograma2";
-        decisionPrograma3 = "decisionPrograma3";
-        Habilidades = "Habilidades";
-        Habilidades2 = "Habilidades2";
-        Habilidades3 = "Habilidades3";
+        //switch(decisionEstudio){ case "1":decisionEstudio= break;} ;
+        //decisionEstudio2 = "decisionEstudio2";
+        //decisionEstudio3 = "decisionEstudio3";
+        //decisionPrograma = "decisionPrograma";
+        //decisionPrograma2 = "decisionPrograma2";
+        //decisionPrograma3 = "decisionPrograma3";
+        //Habilidades = "Habilidades";
+        //Habilidades2 = "Habilidades2";
+        //Habilidades3 = "Habilidades3";
         String tarjetaTresCinco =
                    "<div class='w3-container w3-card-2 w3-white w3-margin-bottom'>"               //2
                     + "<h2 class='w3-text-grey w3-padding-16'>" + "<i class='fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal'>" + "</i>" + "Intereses" + "</h2>"
@@ -355,15 +564,15 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
     private String Tarjeta4(String Estado, String MateriaBaja, String ExamenesMetodo, String actividadExtra, String expectativas, 
                             String expectativasPrograma, String comentario, String ConAlgoritmosProgramas, String sugAlgoProg, String comentarioGen)
     {
-        Estado = "actividades";
-        MateriaBaja = "MateriaBaja";
-        ExamenesMetodo = "ExamenesMetodo";
-        actividadExtra = "actividadExtra";
-        expectativas = "expectativas";
-        expectativasPrograma = "expectativasPrograma";
-        ConAlgoritmosProgramas = "ConAlgoritmosProgramas";
-        sugAlgoProg = "sugAlgoProg";
-        comentarioGen = "comentarioGen";
+        //Estado = "actividades";
+        //MateriaBaja = "MateriaBaja";
+        //ExamenesMetodo = "ExamenesMetodo";
+        //actividadExtra = "actividadExtra";
+        //expectativas = "expectativas";
+        //expectativasPrograma = "expectativasPrograma";
+        //ConAlgoritmosProgramas = "ConAlgoritmosProgramas";
+        //sugAlgoProg = "sugAlgoProg";
+        //comentarioGen = "comentarioGen";
         
         String tarjetaCuatro =
                    "<div class='w3-container w3-card-2 w3-white'>"               //2

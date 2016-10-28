@@ -17,7 +17,7 @@
     <header class="w3-container w3-itam w3-border w3-round-small">
         <div class="w3-itam w3-display-container">
             <img src="img/itam.png" class="w3-image" style="max-height: 100px;" alt="ITAM">
-            <div class="w3-display-right w3-container w3-right"><a href="TestingAlumno.aspx" id="home" runat="server">REGRESA</a></div>
+            <div class="w3-display-right w3-container w3-right"><a id="home" runat="server" href="TestingAlumno.aspx" target="_self">REGRESA</a></div>
         </div>
     </header> 
     <!-- Page Container -->

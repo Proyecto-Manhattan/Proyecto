@@ -10,7 +10,7 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
 {
     protected OdbcConnection conectarBD()
     {
-        String con = "Driver={SQL Server Native Client 11.0};Server=112SALAS14;Uid=sa;Pwd=sqladmin;Database=pruebaAlumno;";
+        String con = "Driver={SQL Server Native Client 11.0};Server=112SALAS13;Uid=sa;Pwd=sqladmin;Database=pruebaAlumno;";
         try
         {
             OdbcConnection conexion = new OdbcConnection(con);
@@ -34,12 +34,12 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
         if (con != null)
         {
             //OdbcCommand cmd = new OdbcCommand("SELECT alumno.claveU,alumno.nombre FROM alumno ORDER BY alumno.claveU", con);
-            OdbcCommand cmd = new OdbcCommand("SELECT alumnos.claveU,alumnos.nombre,alumnos.apellido,alumnos.semestre,alumnos.carrera FROM alumnos ORDER BY alumnos.claveU", con);
+            OdbcCommand cmd = new OdbcCommand("SELECT alumnos.claveU,alumnos.nombre,alumnos.apellido,alumnos.carrera FROM alumnos ORDER BY alumnos.claveU", con);
             OdbcDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 if(!dr.IsDBNull(0))
-                    cards.InnerHtml = cards.InnerHtml + createCard(dr.GetInt32(0).ToString(), dr.GetString(1), dr.GetString(2), dr.GetInt32(3).ToString(), dr.GetString(4));
+                    cards.InnerHtml = cards.InnerHtml + createCard(dr.GetInt32(0).ToString(), dr.GetString(1), dr.GetString(2), dr.GetString(3));
                  //cards.InnerHtml = cards.InnerHtml + createCard(dr.GetString(0), dr.GetString(1));
             }
 
@@ -47,7 +47,7 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
         }
     }
 
-    private String createCard(String clave,String nombre,String apellido,String semestre,String carrera)
+    private String createCard(String clave,String nombre,String apellido,String carrera)
     {
         String card ="<section class='w3-col w3-container m3 l3 w3-teal'><div class='w3-card-8 w3-dark-grey' style='width:100%'>"
           + "<div class='w3-container w3-center'><h3>" + clave + "</h3><img src='img/avatar_png.png' alt='Avatar' style='width:50%'/>"
@@ -62,7 +62,7 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
 
 
         String card2 = ""
-        +"<section class='w3-col w3-container m3 l3 w3-itam  w3-border w3-round-xlarge w3-card-24'><form action='AlumnoGrande.aspx' method='POST' runat='server'>"
+        +"<section class='w3-col w3-container m3 l3 w3-itam  w3-border w3-round-xlarge w3-card-24'>"
         +   "<div class='w3-card-8 w3-dark-grey' style='width:100%'>"
         +       "<div class='w3-container w3-center'>"
         +           "<h3 class='w3-text-lime'>"
@@ -76,20 +76,25 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
                         + apellido 
         +           "</h5>"
         +           "<h4 id='semestre' class='w3-text-green'>"
-                     + semestre 
+                     + "3"//semestre 
         +           "</h4>"
         +           "<div id='carrera' runat='server' class='w3-text-amber'>"
                         + carrera 
         +           "</div>"
         +           "<div class='w3-section' style='overflow:hidden;'>"
-        +               "<button class='w3-btn-block w3-light-green w3-hover-green'>Ver</button>"
+        +               "<button class='w3-btn-block w3-light-green w3-hover-green' form='ver"+clave+"'>Ver</button>"
         +               "<button class='w3-btn-block w3-hover-red'>Elimina</button>"
-        +               "<button class='w3-btn-block w3-light-blue w3-hover-blue'>2° Entrevista</button>"
+        +               "<button class='w3-btn-block w3-light-blue w3-hover-blue' form='segunda"+clave+"'>2° Entrevista</button>"
         +           "</div>"
         +       "</div>"
         +   "</div>"
-        + "<input id='claveUnica' name='claveUnica' type='text' runat='server' style='display:none' value='" + clave + "'>"
-        +"</form></section>";
+        +    "<form id='ver"+clave+"' action='AlumnoGrande.aspx' method='POST' runat='server'>"
+        + "<input id='claveUnica' name='claveUnica' type='text' runat='server' style='display:none;' value='" + clave + "'>"
+        +"</form>"
+         + "<form id='segunda" + clave + "' action='Entrevista2.aspx' method='POST' runat='server'>"
+        + "<input id='claveUnica' name='claveUnica' type='text' runat='server' style='display:none;' value='" + clave + "'>"
+        + "</form>"
+        +"</section>";
 
         card.Replace('"', '$');
         card.Replace('\'', '"');

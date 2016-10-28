@@ -12,24 +12,14 @@
 
 </head>
 <body>
-    <header class="w3-container">
-                           <ul class="w3-navbar w3-light-green">
-                    <li><a href="#" class="w3-padding-16 ">Home</a></li>
-                    <li><a href="#" class="w3-padding-16 ">Link 1</a></li>
-                    <li><a href="#" class="w3-padding-16 ">Link 2</a></li>
-                    <li><a href="#" class="w3-padding-16 ">Link 3</a></li>
-                    <li class="w3-navitem w3-right">
-                      <input type="text" class="w3-input w3-border-0" placeholder="Search for claveUnicas.." id="myInput" onkeyup="myFunction()"/>
-                    </li>
-                    <li class="w3-navitem w3-right">
-                      <input type="text" class="w3-input w3-border-0" placeholder="Search for names.." id="myInput2" onkeyup="myFunction2()"/>
-                    </li>
-                  </ul>
-
-        </header>
+    <header class="w3-container w3-itam w3-border w3-round-small">
+        <div class="w3-itam w3-display-container">
+            <img src="img/itam.png" class="w3-image" style="max-height: 100px;" alt="ITAM">
+            <div class="w3-display-right w3-container w3-right"><a href="TestingAlumno.aspx" id="home" runat="server">REGRESA</a></div>
+        </div>
+    </header>
     <form id="form1" runat="server">
     <div id="forma">
-  <form action="action_page.php">
     
     <!--## Sentimientos ##-->    
     <label for="Sentimientos">¿Cómo se ha sentido en términos generales, en el ITAM?</label>
@@ -67,8 +57,7 @@
     <label for="Comentarios">¿Comentarios Generales?</label>
     <textarea id="Comentarios" name="comentarios">Escribe el texto aquí</textarea>
   
-    <input type="submit" value="Submit">
-  </form>
+    <asp:Button runat="server" ID="Button1" Text="Login" OnClick="Button1_Click1"></asp:Button>
 </div>
 
     </form>
