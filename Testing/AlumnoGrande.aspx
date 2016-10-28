@@ -7,35 +7,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Alumnos</title>
     <link href="css/styles.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/AlumnoGrandeStyle.css">	
+    <link rel="stylesheet" type="text/css" href="css/AlumnoGrandeStyle.css"/>	
 </head>
-<body>
-        <header class="w3-container">
-                           <ul class="w3-navbar w3-light-green">
-                    <li><a href="#" class="w3-padding-16 ">Home</a></li>
-                    <li><a href="#" class="w3-padding-16 ">Link 1</a></li>
-                    <li><a href="#" class="w3-padding-16 ">Link 2</a></li>
-                    <li><a href="#" class="w3-padding-16 ">Link 3</a></li>
-                    <li class="w3-navitem w3-right">
-                      <input type="text" class="w3-input w3-border-0" placeholder="Search for claveUnicas.." id="myInput" onkeyup="myFunction()"/>
-                    </li>
-                    <li class="w3-navitem w3-right">
-                      <input type="text" class="w3-input w3-border-0" placeholder="Search for names.." id="myInput2" onkeyup="myFunction2()"/>
-                    </li>
-                  </ul>
-
-        </header>
-        
-    <div  class="w3-container">
-        <div class="w3-row" id="vista" runat="server">
-
+<body class"w3-light-grey">
+    <header class="w3-container">
+        <ul class="w3-navbar w3-light-green">
+            <li><a href="#" class="w3-padding-16 ">Home</a></li>
+            <li><a href="#" class="w3-padding-16 ">Link 1</a></li>
+            <li><a href="#" class="w3-padding-16 ">Link 2</a></li>
+            <li><a href="#" class="w3-padding-16 ">Link 3</a></li>
+            <li class="w3-navitem w3-right">
+                <input type="text" class="w3-input w3-border-0" placeholder="Search for claveUnicas.." id="myInput" onkeyup="myFunction()"/>
+            </li>
+            <li class="w3-navitem w3-right">
+                <input type="text" class="w3-input w3-border-0" placeholder="Search for names.." id="myInput2" onkeyup="myFunction2()"/>
+            </li>
+        </ul>
+    </header>           
+    <!-- Page Container -->
+    <div class='w3-container w3-content w3-margin-top' id='contenedor'>
+        <!-- The Grid -->
+        <div class='w3-row-padding'>
+            <div class="w3-row" id="columnaIzq" runat="server">
                 <!--
-                     =================
-                    Inserción de alumnos grande
-                     =================
+                 =================
+                 Inserción de columnaIzq alumnos grande
+                 =================
                 -->
-    
-        </div>
+            </div>
+            <div class="w3-row" id="columnaDer" runat="server">
+                <!--
+                 =================
+                 Inserción de columnaDer alumnos grande
+                 =================
+                -->
+            </div>            
+        <!-- End Grid -->         
+        </div>   
+    <!-- End Page Container -->     
     </div>
 </body>
 </html>
