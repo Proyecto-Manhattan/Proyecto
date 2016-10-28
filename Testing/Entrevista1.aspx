@@ -79,6 +79,15 @@
 
         <!--## Trabajo ##-->
         <!--Se podria poner javaScript para dar a elegir las opciones-->
+        <label for="EstudioOtro">Estudia aparte en otra escuela</label>
+        <input type="text" id="EstudioOtro" name="estudioOtro" runat="server">
+
+        <label for="QueEstudio">¿Qué estudia?</label>
+        <input type="text" id="QueEstudio" name="queEstudio" runat="server">
+
+        <label for="DondeEstudia">¿Dónde Estudia?</label>
+        <input type="text" id="DondeEstudia" name="dondeEstudia" runat="server">
+
         <label for="Trabajo">Trabajo</label>
         <input type="text" id="Trabajo" name="trabajo" runat="server">
 
@@ -101,7 +110,7 @@
 
         <!--## decision estudio itam ##-->
         <!--Se podria poner javaScript para dar a elegir las opciones-->
-        <label for="Seleccion">Para las siguientes preguntas elegir primero la de mayor importacia</label>
+        <label for="Seleccion">Para las siguientes preguntas elegir primero la de mayor importacia</label><br />
         <label for="Seleccion">¿Por qué decidió estudiar en el ITAM?</label>
         <select id="Select1" name="seleccion" runat="server">
             <option value="1">Cercanía</option>

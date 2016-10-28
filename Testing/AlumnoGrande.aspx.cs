@@ -224,9 +224,13 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
         dondeTrabaja = "dondeTrabaja";
         puesto = "puesto";
 
+        queEstudia = "queEstudia";
+        dondeEstudia = "dondeEstudia";
+        
         ayudaFinanciera = "ayudaFinanciera";
         becaPorcetanje = "becaPorcetanje";
         ayudaPorcentaje = "ayudaPorcentaje";
+
         String tarjetaDos =
                    "<div class='w3-container w3-card-2 w3-white w3-margin-bottom'>"  //2
                        + "<h2 class='w3-text-grey w3-padding-16'>" + "<i class='fa fa-institution fa-fw w3-margin-right w3-xxlarge w3-text-teal'>" + "</i>" + "Institucion" + "</h2>"
