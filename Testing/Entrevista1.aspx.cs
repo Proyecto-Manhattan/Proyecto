@@ -46,6 +46,30 @@ public partial class Testing_Entrevista1 : System.Web.UI.Page
         if (con != null)
         {
             String texto_claveUnica = plis.Value.ToString();
+            String texto_nombre = Nombre.Value.ToString();
+            String texto_apellido = Apellido.Value.ToString();
+            String texto_edad = Edad.Value.ToString();
+            String texto_email = Email.Value.ToString();
+            String texto_tel = Telefono.Value.ToString();
+            String texto_pais = Pais.Value.ToString();
+            String texto_estado = Estado.Value.ToString();
+            String texto_delegacion = Delegacion.Value.ToString();
+            String texto_celular = Celular.Value.ToString();
+            String texto_universidad = Universidad.Value.ToString();
+            String texto_carrera = Carrera.Value.ToString();
+            String texto_preparatoria = Preparatoria.Value.ToString();
+            String texto_trabajo = Trabajo.Value.ToString();
+            String texto_lugarTrabajo = LugarTrabajo.Value.ToString();
+            String texto_puesto = Puesto.Value.ToString();
+            String texto_ayudaFinanciera = AyudaFinanciera.Value.ToString();
+            String texto_porcentajeBeca = PorcentajeBeca.Value.ToString();
+            String texto_porcentajeAyudadFinanciera = PorcentajeAyudaFinanciera.Value.ToString();
+            String texto_actividad = Actividad.Value.ToString();
+            String texto_hobby = Hobby.Value.ToString();
+            String texto_felicidad = Felicidad.Value.ToString();
+                
+
+
             ////OdbcCommand cmd = new OdbcCommand("SELECT alumno.claveU,alumno.nombre FROM alumno ORDER BY alumno.claveU", con);
             //OdbcCommand cmd = new OdbcCommand("SELECT alumnos.claveU,alumnos.nombre,alumnos.apellido,alumnos.semestre,alumnos.carrera FROM alumnos ORDER BY alumnos.claveU", con);
             //OdbcDataReader dr = cmd.ExecuteReader();
