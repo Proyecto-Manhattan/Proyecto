@@ -236,7 +236,7 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
                    "<div class='w3-container w3-card-2 w3-white w3-margin-bottom'>"  //2
                        + "<h2 class='w3-text-grey w3-padding-16'>" + "<i class='fa fa-institution fa-fw w3-margin-right w3-xxlarge w3-text-teal'>" + "</i>" + "Institucion" + "</h2>"
                        + "<div class='w3-container'>"          //3
-                           + "<h5 class='w3-opacity'>" + "<b>" + "Estudia en otra escuela" + otraEscuela  + "</b>" + "</h5>"
+                           + "<h5 class='w3-opacity'>" + "<b>" + "Estudia en otra escuela: " + otraEscuela  + "</b>" + "</h5>"
                            + "<p>" + queEstudia + "</p>"
                            + "<p>" + dondeEstudia + "</p>"
                            + "<hr>"
