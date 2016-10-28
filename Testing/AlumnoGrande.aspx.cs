@@ -66,6 +66,17 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
                                                                       dr.GetString(1),
                                                                       dr.GetString(2),
                                                                       dr.GetString(3));
+                    tarjetaCuatro.InnerHtml = tarjetaCuatro.InnerHtml + Tarjeta4(
+                                                                     dr.GetString(0),
+                                                                     dr.GetString(1),
+                                                                     dr.GetString(2),
+                                                                     dr.GetString(3),
+                                                                     dr.GetString(4),
+                                                                     dr.GetString(5),
+                                                                     dr.GetString(6),
+                                                                     dr.GetString(7),
+                                                                     dr.GetString(8),
+                                                                     dr.GetString(9));
 
                     //cards.InnerHtml = cards.InnerHtml + createCard(dr.GetString(0), dr.GetString(1));
                 }                
@@ -78,6 +89,7 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
             tarjetaUno.InnerHtml = tarjetaUno.InnerHtml + Tarjeta1("", "", "");
             tarjetaDos.InnerHtml = tarjetaDos.InnerHtml + Tarjeta2("", "", "", "", "", "", "", "", "");
             tarjetaTres.InnerHtml = tarjetaTres.InnerHtml + Tarjeta3("", "", "", "");
+            tarjetaCuatro.InnerHtml = tarjetaCuatro.InnerHtml + Tarjeta4("", "", "", "", "", "", "", "", "", "");
         }
     }
 
@@ -249,7 +261,7 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
         felicidad = "felicidad";
         comentarios = "comentarios";
         String tarjetaTres =
-                   "<div class='w3-container w3-card-2 w3-white'>"               //2
+                   "<div class='w3-container w3-card-2 w3-white w3-margin-bottom'>"               //2
                     + "<h2 class='w3-text-grey w3-padding-16'>" + "<i class='fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal'>" + "</i>" + "Intereses" + "</h2>"
                     + "<div class='w3-container'>"              //3
                         + "<h5 class='w3-opacity'>" + "<b>" + "Actividad deportiva, cultural, académica que le gustaría participar" + "</b>" + "</h5>"
@@ -276,5 +288,63 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
         tarjetaTres.Replace('\'', '"');
         tarjetaTres.Replace('$', '\'');
         return tarjetaTres;
+    }
+    private String Tarjeta4(String Estado, String MateriaBaja, String ExamenesMetodo, String actividadExtra, String expectativas, 
+                            String expectativasPrograma, String comentario, String ConAlgoritmosProgramas, String sugAlgoProg, String comentarioGen)
+    {
+        Estado = "actividades";
+        MateriaBaja = "MateriaBaja";
+        ExamenesMetodo = "ExamenesMetodo";
+        actividadExtra = "actividadExtra";
+        expectativas = "expectativas";
+        expectativasPrograma = "expectativasPrograma";
+        ConAlgoritmosProgramas = "ConAlgoritmosProgramas";
+        sugAlgoProg = "sugAlgoProg";
+        comentarioGen = "comentarioGen";
+        
+        String tarjetaCuatro =
+                   "<div class='w3-container w3-card-2 w3-white'>"               //2
+                    + "<h2 class='w3-text-grey w3-padding-16'>" + "<i class='fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal'>" + "</i>" + "Entrevista 2" + "</h2>"
+                    + "<div class='w3-container'>"              //3
+                        + "<h5 class='w3-opacity'>" + "<b>" + "Estado en términos generales, en el ITAM" + "</b>" + "</h5>"
+                        + "<p>" + Estado + "</p>"
+                        + "<hr>"
+                    + "</div>"                                  //-3
+                    + "<div class='w3-container'>"              //4
+                        + "<h5 class='w3-opacity'>" + "<b>" + "Materias dadas de baja" + "</b>" + "</h5>"
+                        + "<p>" + MateriaBaja + "</p>"
+                        + "<hr>"
+                    + "</div>"                                  //-4
+                    + "<div class='w3-container'>"              //5
+                        + "<h5 class='w3-opacity'>" + "<b>" + "Satisfaccion exámenes y metodología " + "</b>" + "</h5>"
+                        + "<p>" + ExamenesMetodo + "</p>"
+                        + "<hr>"
+                    + "</div>"                                  //-5
+                    + "<div class='w3-container'>"              //6
+                        + "<h5 class='w3-opacity'>" + "<b>" + "Participación actividad extra-curricular" + "</b>" + "</h5>"
+                        + "<p>" + actividadExtra + "</p>" + "<br>"
+                    + "</div>"                                  //-6
+                    + "<div class='w3-container'>"              //6
+                        + "<h5 class='w3-opacity'>" + "<b>" + "Cambio de  expectativas con respecto al ITAM" + "</b>" + "</h5>"
+                        + "<p>" + expectativas + "</p>" + "<br>"
+                    + "</div>"                                  //-6
+                    + "<div class='w3-container'>"              //6
+                        + "<h5 class='w3-opacity'>" + "<b>" + "Cambio de expectativas con respecto al programa de Ingeniería en Computacion" + "</b>" + "</h5>"
+                        + "<p>" + expectativasPrograma + "</p>" + "<br>"
+                    + "</div>"                                  //-6
+                    + "<div class='w3-container'>"              //6
+                        + "<h5 class='w3-opacity'>" + "<b>" + "consideracion de la metodología utilizada y el contenido de Algoritmos y Programas de Ingeniería en Computación" + "</b>" + "</h5>"
+                        + "<p>" + ConAlgoritmosProgramas + "</p>" + "<br>"
+                    + "</div>"                                  //-6
+                    + "<div class='w3-container'>"              //6
+                        + "<h5 class='w3-opacity'>" + "<b>" + "Comentarios Generales" + "</b>" + "</h5>"
+                        + "<p>" + comentarioGen + "</p>" + "<br>"
+                    + "</div>"
+                  + "</div>";                //-2                  
+
+        tarjetaCuatro.Replace('"', '$');
+        tarjetaCuatro.Replace('\'', '"');
+        tarjetaCuatro.Replace('$', '\'');
+        return tarjetaCuatro;
     }
 }
