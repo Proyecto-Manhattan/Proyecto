@@ -13,7 +13,7 @@
         <header class="w3-container w3-itam w3-border w3-round-small">
                     <div class="w3-itam w3-display-container">
                         <img src="img/itam.png" class="w3-image" style="max-height:100px;" alt="ITAM" >
-                        <div class="w3-display-right w3-container w3-right">REGRESA</div>
+                        <div class="w3-display-right w3-container w3-right"><a href="#" id="home" runat="server">REGRESA</a></div>
                     </div>
                   <!--  <ul class="w3-navbar w3-light-green w3-collapse">
                     <li><a href="#" class="w3-padding-16 ">Link 1</a></li>

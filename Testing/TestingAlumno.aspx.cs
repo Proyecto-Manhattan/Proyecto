@@ -10,7 +10,7 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
 {
     protected OdbcConnection conectarBD()
     {
-        String con = "Driver={SQL Server Native Client 11.0};Server=112SALAS24;Uid=sa;Pwd=sqladmin;Database=pruebaAlumno;";
+        String con = "Driver={SQL Server Native Client 11.0};Server=112SALAS14;Uid=sa;Pwd=sqladmin;Database=pruebaAlumno;";
         try
         {
             OdbcConnection conexion = new OdbcConnection(con);
@@ -27,6 +27,8 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        String user = Request.Form.Get("user");
+        home.InnerHtml = user;
         OdbcConnection con = conectarBD();
 
         if (con != null)
