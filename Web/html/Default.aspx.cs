@@ -11,6 +11,8 @@ public partial class Web_html_Default : System.Web.UI.Page
     private String pswd;
     protected void Page_Load(object sender, EventArgs e)
     {
+
+
         user = Request.Form.Get("username");
         pswd = Request.Form.Get("password");
 

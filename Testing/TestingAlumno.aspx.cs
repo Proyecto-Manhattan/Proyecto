@@ -27,8 +27,8 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        String user = Request.Form.Get("user");
-        home.InnerHtml = user;
+        //String user = Request.Form.Get("user");
+        //home.InnerHtml = user;
         OdbcConnection con = conectarBD();
 
         if (con != null)
@@ -62,10 +62,10 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
 
 
         String card2 = ""
-        +"<section class='w3-col w3-container m3 l3 w3-itam  w3-border w3-round-xlarge w3-card-24'>"
+        +"<section class='w3-col w3-container m3 l3 w3-itam  w3-border w3-round-xlarge w3-card-24'><form action='Entrevista1.aspx' method='post'>"
         +   "<div class='w3-card-8 w3-dark-grey' style='width:100%'>"
         +       "<div class='w3-container w3-center'>"
-        +           "<h3 class='w3-text-lime'>"
+        +           "<h3 class='w3-text-lime' name='claveUnica'>"
                         + clave 
         +           "</h3>"
         +           "<img src='img/avatar_png.png' alt='Avatar' style='width:50%'/>"
@@ -88,7 +88,7 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
         +           "</div>"
         +       "</div>"
         +   "</div>"
-        +"</section>";
+        +"</form></section>";
 
         card.Replace('"', '$');
         card.Replace('\'', '"');

@@ -16,7 +16,7 @@
                     </div>
         </header>
         <div class="w3container w3-display-middle " style="width:70%;">
-  			<form class="w3-container" action="TestingAlumno.aspx" method="post" runat="server">
+  			<form class="w3-container"  runat="server" >
         		<p>
         		<label class="w3-label w3-text-brown"><b>User:</b></label>
         		<input class="w3-input w3-border w3-sand" id="user" name="user" type="text" runat="server" required/></p>
@@ -24,8 +24,8 @@
         		<label class="w3-label w3-text-brown"><b>Password:</b></label>
         		<input class="w3-input w3-border w3-sand" id="pwd" name="pwd" type="password" runat="server" required/></p>
         		<p>
-        		<asp:button  runat="server" id="Button1" Text="Login"></asp:button></p>
-                  <asp:label runat="server" Text=""></asp:label>
+        		<asp:button  runat="server" id="Button1" Text="Login" OnClick="Button1_Click1"></asp:button></p>
+                  <asp:label runat="server" Text="" ID="lb_warn"></asp:label>
         	</form>
 		</div>
 		<footer class="w3-itam-black w3-bottom">

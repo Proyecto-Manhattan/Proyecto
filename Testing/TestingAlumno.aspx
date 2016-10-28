@@ -13,7 +13,7 @@
         <header class="w3-container w3-itam w3-border w3-round-small">
                     <div class="w3-itam w3-display-container">
                         <img src="img/itam.png" class="w3-image" style="max-height:100px;" alt="ITAM" >
-                        <div class="w3-display-right w3-container w3-right"><a href="#" id="home" runat="server">REGRESA</a></div>
+                        <div class="w3-display-right w3-container w3-right"><a href="sudo.aspx" id="home" runat="server">REGRESA</a></div>
                     </div>
                   <!--  <ul class="w3-navbar w3-light-green w3-collapse">
                     <li><a href="#" class="w3-padding-16 ">Link 1</a></li>
@@ -30,14 +30,17 @@
                     </li>
                   </ul>-->
                     <div class="w3-row-padding w3-section">
-                          <div class="w3-col m4 l4 w3-center ">
+                          <div class="w3-col m3 l3 w3-center ">
                               <input type="text" class="w3-input w3-border-0 w3-border w3-border-black" placeholder="Search for semestre.." id="myInput3" onkeyup="searchSemestre()"/>
                           </div>
-                          <div class="w3-col m4 l4 w3-center ">
+                          <div class="w3-col m3 l3 w3-center ">
                               <input type="text" class="w3-input w3-border-0 w3-border w3-border-black" placeholder="Search for claveUnicas.." id="myInput" onkeyup="searchClave()"/>
                           </div>
-                          <div class="w3-col m4 l4 w3-center ">
+                          <div class="w3-col m3 l3 w3-center ">
                               <input type="text" class="w3-input w3-border-0 w3-border w3-border-black" placeholder="Search for names.." id="myInput2" onkeyup="searchNombre()"/>
+                          </div>
+                        <div class="w3-col m3 l3 w3-center ">
+                            <a href="Entrevista1.aspx" class=" w3-block w3-input w3-border-0 w3-border w3-border-black w3-light-grey w3-text-black w3-round-xlarge w3-hover-lime w3-hover-text-black">Agrega</a>
                           </div>
                      </div>
 

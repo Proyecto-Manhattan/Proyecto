@@ -29,10 +29,15 @@ public partial class Testing_sudo : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         Button1.Attributes.Add("class", "w3-btn w3-itam w3-round-large w3-card-8");
+        lb_warn.Attributes.Add("class", "w3-pale-red w3-text-red w3-center");
     }
 
 
     protected void Button1_Click(object sender, EventArgs e)
+    {
+        
+    }
+    protected void Button1_Click1(object sender, EventArgs e)
     {
         OdbcConnection con = conectarBD();
 
@@ -40,15 +45,18 @@ public partial class Testing_sudo : System.Web.UI.Page
         {
             String users = user.Value.ToString();
             String pwds = pwd.Value.ToString();
-            OdbcCommand cmd = new OdbcCommand("SELECT usuarios.usuario,usuarios.passwd FROM usuarios WHERE usuarios.usuario ='"+user+"' AND usuarios.passwd = '"+pwds+"';", con);
+            String query = "SELECT usuarios.usuario,usuarios.passwd FROM usuarios WHERE usuarios.usuario ='" + users + "' AND usuarios.passwd = '" + pwds + "';" ;
+            OdbcCommand cmd = new OdbcCommand(query, con);
             OdbcDataReader dr = cmd.ExecuteReader();
+            
             if (dr.HasRows)
             {
+                dr.Read();
                 Response.Redirect("TestingAlumno.aspx");
             }
             else
             {
-                lb_warn.Text = ":(";
+                lb_warn.Text = "Usuario o Contraseña Incorrectos (¿Si sabes escribir?)   (╯°□°）╯︵ ┻━┻ ||||||||||||||";
             }
 
             dr.Close();
