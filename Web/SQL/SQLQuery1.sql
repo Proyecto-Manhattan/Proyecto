@@ -2,42 +2,51 @@ CREATE TABLE usuarios
 	(
 	 usuario varchar(50) NOT NULL,
 	 passwd varchar(50) NOT NULL
-	)
+	);
 
 CREATE TABLE alumnos
 	(claveU int PRIMARY KEY NOT NULL,
 	 nombre varchar(100)NOT NULL,
 	 apellido varchar(100)NOT NULL,
-	 correo varchar(50) NOT NULL,
 	 edad smallint NOT NULL,
-	 semestre smallint NOT NULL,
+	 correo varchar(50) NOT NULL,
+	 telefono bigint NOT NULL,
+	 celular bigint,
 	 carrera varchar(100) NOT NULL,
-	 preparatoria varchar(200) NOT NULL,
-	 delegacion varchar(200) NOT NULL,
-	 telefono bigint NOT NULL
-	)
-
+	 estado varchar(100) NOT NULL,
+	 pais varchar(100) NOT NULL,
+	);
+CREATE TABLE alumnos_datos
+	(claveU int PRIMARY KEY NOT NULL,
+	 universidad varchar(100),
+	 preparatoria varchar(100),
+	 delegacion varchar(100)		
+	);
 CREATE TABLE alumnos_fotos
 	(claveU int references alumnos,
-	 fotoBinary varbinary(MAX) not null,
+	 fotoBinary varbinary(MAX),
 	 fotoImage image
-	)
+	);
 
-CREATE TABLE alumnos_extra
+CREATE TABLE alumnos_institucion
 	(claveU int references alumnos,
+	 estudiaOtra varchar(50),
 	 otraEscuela varchar(250),
-	 trabajo varchar(250),
+	 queEstudia varchar(100),
+	 trabajo varchar(50),
+	 lugarTrabajo varchar (100),
 	 puesto varchar(250),
 	 ayudaFinan varchar(250),
-	 procedencia varchar(100),
-	)
+	 porcentajeBeca varchar(50),
+	 porcentajeFinanciera varchar(50)
+	);
 
 CREATE TABLE alumno_dec_itam
 	(claveU int references alumnos,
 	 prioridad1 varchar(250),
      prioridad2 varchar(250),
 	 prioridad3 varchar(250)
-	)
+	);
 
 CREATE TABLE alumno_dec_programa
 	(claveU int references alumnos,
@@ -55,7 +64,6 @@ CREATE TABLE alumno_dec_habilidades
 
 CREATE TABLE alumno_preguntas
 	(claveU int references alumnos,
-	 horasEstudio smallint,
      actividadDeseo varchar(250),
 	 hobby varchar(250),
 	 felicidadItam varchar(250),
@@ -72,15 +80,15 @@ CREATE TABLE opcionesCb
 CREATE TABLE respSegundaEntrevista
 	(
 	 claveU int references alumnos,
-	 resp1 varchar(500),
-	 resp2 varchar(500),
-	 resp3 varchar(500),
-	 resp4 varchar(500),
-	 resp5 varchar(500),
-	 resp6 varchar(500),
-	 resp7 varchar(500),
-	 resp8 varchar(500),
-	 resp9 varchar(500)
+	 resp1 text,
+	 resp2 text,
+	 resp3 text,
+	 resp4 text,
+	 resp5 text,
+	 resp6 text,
+	 resp7 text,
+	 resp8 text,
+	 resp9 text
 	)
 
 CREATE TABLE pregSegundaEntrevista
