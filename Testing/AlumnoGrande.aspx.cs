@@ -89,6 +89,7 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
             tarjetaUno.InnerHtml = tarjetaUno.InnerHtml + Tarjeta1("", "", "");
             tarjetaDos.InnerHtml = tarjetaDos.InnerHtml + Tarjeta2("", "", "", "", "", "", "", "", "");
             tarjetaTres.InnerHtml = tarjetaTres.InnerHtml + Tarjeta3("", "", "", "");
+            tarjetaTresCinco.InnerHtml = tarjetaTresCinco.InnerHtml + Tarjeta35("", "", "", "", "", "", "", "", "");
             tarjetaCuatro.InnerHtml = tarjetaCuatro.InnerHtml + Tarjeta4("", "", "", "", "", "", "", "", "", "");
         }
     }
@@ -289,6 +290,52 @@ public partial class Testing_AlumnoGrande : System.Web.UI.Page
         tarjetaTres.Replace('$', '\'');
         return tarjetaTres;
     }
+
+    private String Tarjeta35(String decisionEstudio, String decisionEstudio2, String decisionEstudio3,
+                             String decisionPrograma, String decisionPrograma2, String decisionPrograma3,
+                             String Habilidades, String Habilidades2, String Habilidades3)
+    {
+        decisionEstudio = "decisionEstudio";
+        decisionEstudio2 = "decisionEstudio2";
+        decisionEstudio3 = "decisionEstudio3";
+        decisionPrograma = "decisionPrograma";
+        decisionPrograma2 = "decisionPrograma2";
+        decisionPrograma3 = "decisionPrograma3";
+        Habilidades = "Habilidades";
+        Habilidades2 = "Habilidades2";
+        Habilidades3 = "Habilidades3";
+        String tarjetaTresCinco =
+                   "<div class='w3-container w3-card-2 w3-white w3-margin-bottom'>"               //2
+                    + "<h2 class='w3-text-grey w3-padding-16'>" + "<i class='fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal'>" + "</i>" + "Intereses" + "</h2>"
+                    + "<div class='w3-container'>"              //3
+                        + "<h5 class='w3-opacity'>" + "<b>" + "Decisiones para estudiar en el ITAM?" + "</b>" + "</h5>"
+                        + "<p>" + decisionEstudio + "</p>"
+                        + "<p>" + decisionEstudio2 + "</p>"
+                        + "<p>" + decisionEstudio3 + "</p>"
+                        + "<hr>"
+                    + "</div>"                                  //-3
+                    + "<div class='w3-container'>"              //4
+                        + "<h5 class='w3-opacity'>" + "<b>" + "Decisiones para el programa de computación" + "</b>" + "</h5>"
+                        + "<p>" + decisionPrograma + "</p>"
+                        + "<p>" + decisionPrograma2 + "</p>"
+                        + "<p>" + decisionPrograma3 + "</p>"
+                        + "<hr>"
+                    + "</div>"                                  //-4
+                    + "<div class='w3-container'>"              //5
+                        + "<h5 class='w3-opacity'>" + "<b>" + "Habilidades" + "</b>" + "</h5>"
+                        + "<p>" + Habilidades + "</p>"
+                        + "<p>" + Habilidades2 + "</p>"
+                        + "<p>" + Habilidades3 + "</p>"
+                        + "<hr>"
+                    + "</div>"                                  //-5                                                   
+                  + "</div>";                //-2                  
+
+        tarjetaTresCinco.Replace('"', '$');
+        tarjetaTresCinco.Replace('\'', '"');
+        tarjetaTresCinco.Replace('$', '\'');
+        return tarjetaTresCinco;
+    }
+
     private String Tarjeta4(String Estado, String MateriaBaja, String ExamenesMetodo, String actividadExtra, String expectativas, 
                             String expectativasPrograma, String comentario, String ConAlgoritmosProgramas, String sugAlgoProg, String comentarioGen)
     {

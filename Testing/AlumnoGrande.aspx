@@ -7,7 +7,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Alumnos</title>
     <link href="css/styles.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/AlumnoGrandeStyle.css"/>	
+    <link rel="stylesheet" type="text/css" href="css/AlumnoGrandeStyle.css"/>
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    
 </head>
 <body class"w3-light-grey">
     <header class="w3-container">
@@ -53,6 +57,13 @@
                     -->
                     </div>
                     <div id="tarjetaTres" runat="server">                   
+                    <!--
+                     =================
+                     Inserción de Tarjeta3 a alumnos grande
+                     =================
+                    -->
+                    </div>
+                     <div id="tarjetaTresCinco" runat="server">                   
                     <!--
                      =================
                      Inserción de Tarjeta3 a alumnos grande
