@@ -91,8 +91,8 @@ public partial class Testing_TestingAlumno : System.Web.UI.Page
         +    "<form id='ver"+clave+"' action='AlumnoGrande.aspx' method='POST' runat='server'>"
         + "<input id='claveUnica' name='claveUnica' type='text' runat='server' style='display:none;' value='" + clave + "'>"
         +"</form>"
-         + "<form id='segunda" + clave + "' action='Entrevista2.aspx' method='POST' runat='server'>"
-        + "<input id='claveUnica' name='claveUnica' type='text' runat='server' style='display:none;' value='" + clave + "'>"
+         + "<form id='segunda"+clave+ "' action='Entrevista2.aspx' method='POST' runat='server'>"
+        + "<input id='claveUnica2' name='claveUnica2' type='text' runat='server' style='display:none;' value='" + clave + "'>"
         + "</form>"
         +"</section>";
 

@@ -57,7 +57,9 @@
     
         </div>
     </div>
-
+    <footer class="w3-itam-black w3-bottom">
+			<p class="w3-center">Derechos Reservados © ITAM, 2016</p>
+		</footer>
     <script>
         function searchClave() {
             var input, filter, cards, section, h3, i, input2,input3;

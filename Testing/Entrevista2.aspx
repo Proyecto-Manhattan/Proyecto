@@ -23,40 +23,40 @@
     
     <!--## Sentimientos ##-->    
     <label for="Sentimientos">¿Cómo se ha sentido en términos generales, en el ITAM?</label>
-    <textarea id="Sentimientos" name="sentimientos">Escribe el texto aquí</textarea>
+    <textarea id="Sentimientos" name="sentimientos" runat="server">Escribe el texto aquí</textarea>
     
     <!--## Baja ##-->
     <label for="Baja">¿Se ha dado de baja de alguna materia? ¿Cúal o cúales?</label>
-    <textarea id="Baja" name="baja">Escribe el texto aquí</textarea>
+    <textarea id="Baja" name="baja" runat="server">Escribe el texto aquí</textarea>
 
     <!--## Examenes ##-->
     <label for="Examenes">¿Cómo le ha ido en sus exámenes? ¿Le ha funcionado su metodología de estudio?</label>
-    <textarea id="Examenes" name="examenes">Escribe el texto aquí</textarea>
+    <textarea id="Examenes" name="examenes" runat="server">Escribe el texto aquí</textarea>
 
     <!--## Actividad ##-->
     <label for="Actividad">¿Participa en alguna actividad extra-curricular? ¿Cuál?</label>
-    <textarea id="Actividad" name="actividad">Escribe el texto aquí</textarea>
+    <textarea id="Actividad" name="actividad" runat="server">Escribe el texto aquí</textarea>
 
     <!--## Expectativas ##-->
     <label for="Expectativas">¿Han cambiado sus expectativas con respecto al ITAM?</label>
-    <textarea id="Expectativas" name="expectativas">Escribe el texto aquí</textarea>
+    <textarea id="Expectativas" name="expectativas" runat="server">Escribe el texto aquí</textarea>
 
     <!--## ExpectativasPrograma ##-->
     <label for="ExpectativasPrograma">¿Han cambiado sus expectativas con respecto al programa de Ingeniería en Computacion?</label>
-    <textarea id="ExpectativasPrograma" name="expectativasPrograma">Escribe el texto aquí</textarea>
+    <textarea id="ExpectativasPrograma" name="expectativasPrograma" runat="server">Escribe el texto aquí</textarea>
 
     <!--## AlgoritmosProgramas ##-->
     <label for="AlgoritmosProgramas">¿Cómo consideras la metodología utilizada y el contenido de Algoritmos y Programas de Ingeniería en Computación?</label>
-    <textarea id="AlgoritmosProgramas" name="algoritmosProgramas">Escribe el texto aquí</textarea>
+    <textarea id="AlgoritmosProgramas" name="algoritmosProgramas" runat="server">Escribe el texto aquí</textarea>
 
     <!--## MejoraAlgoritmosProgramas ##-->
     <label for="MejoraAlgoritmosProgramas">¿Qué sugerirías para mejorar la materia de Algoritmos y Programas?</label>
-    <textarea id="MejoraAlgoritmosProgramas" name="mejoraAlgoritmosProgramas">Escribe el texto aquí</textarea>
+    <textarea id="MejoraAlgoritmosProgramas" name="mejoraAlgoritmosProgramas" runat="server">Escribe el texto aquí</textarea>
 
     <!--## Comentarios ##-->
     <label for="Comentarios">¿Comentarios Generales?</label>
-    <textarea id="Comentarios" name="comentarios">Escribe el texto aquí</textarea>
-  
+    <textarea id="Comentarios" name="comentarios" runat="server">Escribe el texto aquí</textarea>
+     <input id="clavesota" name="clavesota" runat="server" style="display:none"/>
     <asp:Button runat="server" ID="Button1" Text="Login" OnClick="Button1_Click1"></asp:Button>
 </div>
 
