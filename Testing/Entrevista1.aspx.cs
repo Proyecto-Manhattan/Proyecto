@@ -80,7 +80,10 @@ public partial class Testing_Entrevista1 : System.Web.UI.Page
             String texto_hobby = Hobby.Value.ToString();
             String texto_felicidad = Felicidad.Value.ToString();
             String texto_comentario = Recomendaciones.Value.ToString();
-
+            if (texto_celular == "")
+            {
+                texto_celular = "0";
+            }
             String query = String.Format("INSERT INTO alumnos(claveU,nombre,apellido,edad,correo,telefono,celular,carrera,estado,pais) VALUES('{0}','{1}','{2}',{3},'{4}',{5},{6},'{7}','{8}','{9}');"
                             + "INSERT INTO alumnos_datos(claveU,universidad,preparatoria,delegacion) VALUES({10},'{11}','{12}','{13}');"
                             + "INSERT INTO alumnos_institucion(claveU,estudiaOtra,otraEscuela,queEstudia,trabajo,lugarTrabajo,puesto,ayudaFinan,porcentajeBeca,porcentajeFinanciera) VALUES ({14},'{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}');"
