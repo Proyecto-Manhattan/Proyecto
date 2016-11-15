@@ -1,5 +1,6 @@
 # Manhattan D´Veritas
     **A.K.A** *(Consulta ITAM)
+    http://eldeveritas.blogspot.mx/
 
 Proyecto que busca crear una manera mas eficiente de mantener en contacto a los profesores con sus alumnos.
 
